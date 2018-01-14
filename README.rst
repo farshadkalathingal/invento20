@@ -20,6 +20,19 @@ Moved to settings_.
 
 Basic Commands
 --------------
+Installation
+^^^^^^^^^^^^^^^^^^^^^
+* Use virtualenv to create a new virtual environment and work on that
+* Install Postgres 9.5 using https://tutorial-extensions.djangogirls.org/en/optional_postgresql_installation/
+* pip install -r requirements/local.txt
+* $ createdb inventodb
+ This is for creating a postgres db called inventodb
+* $ python manage.py migrate
+  $ python manage.py runserver
+* Rename env.example to .env to begin updating the file with your own environment variables. To add your database, define DATABASE_URL and add it to the .env file, as shown below: (the .env file example can be found at https://gist.github.com/biswaz/53674d5afc210b229972ca13946e40b3
+$ DATABASE_URL="postgres://<pg_user_name>:<pg_user_password>@127.0.0.1:<pg_port>/<pg_database_name>"
+ 
+
 
 Setting Up Your Users
 ^^^^^^^^^^^^^^^^^^^^^
