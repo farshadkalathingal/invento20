@@ -22,19 +22,28 @@ Basic Commands
 --------------
 Installation
 ^^^^^^^^^^^^^^^^^^^^^
-* Use virtualenv to create a new virtual environment and work on that
-* Install Postgres 9.5 using https://tutorial-extensions.djangogirls.org/en/optional_postgresql_installation/
-* pip install -r requirements/local.txt
-* $ createdb inventodb
- This is for creating a postgres db called inventodb
-* Create .env file Edit DATABASE_URL to the .env file. Example can be found at https://gist.github.com/biswaz/53674d5afc210b229972ca13946e40b3
-```
-$ DATABASE_URL="postgres://<pg_user_name>:<pg_user_password>@127.0.0.1:<pg_port>/<pg_database_name>"
-```
-* ```
-  $ python manage.py migrate
-  $ python manage.py runserver
-  ```
+* Use virtualenv to create a new virtual environment.
+* Activate the virtual environment.
+* Install all dependencies using the command
+    `pip install -r requirements/local.txt`
+* Install Postgres 9.5 using 
+   https://tutorial-extensions.djangogirls.org/en/optional_postgresql_installation/
+* Create a postgres database using the command
+    `$ createdb inventodb`
+* Create .env file in the project root. An example can be found at 
+    https://gist.github.com/biswaz/53674d5afc210b229972ca13946e40b3
+* Type this in terminal
+    `export DJANGO_READ_DOT_ENV_FILE=True`
+* Change the DATABASE_URL in the following format
+
+```$ DATABASE_URL="postgres://<pg_user_name>:<pg_user_password>@127.0.0.1:<pg_port>/<pg_database_name>"```
+
+* Perform migrations and start the server.
+
+  `$ python manage.py migrate`
+
+  `$ python manage.py runserver`
+  
  
 
 
@@ -110,5 +119,4 @@ Deployment
 The following details how to deploy this application.
 
 
-
-
+ 
