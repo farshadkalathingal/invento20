@@ -262,6 +262,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
 ACCOUNT_ADAPTER = 'invento18.users.adapters.AccountAdapter'
 SOCIALACCOUNT_ADAPTER = 'invento18.users.adapters.SocialAccountAdapter'
+ACCOUNT_SIGNUP_FORM_CLASS = 'invento18.users.forms.SignupForm'
 
 # Custom user app defaults
 # Select the correct user model
