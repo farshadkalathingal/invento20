@@ -20,7 +20,7 @@ class SignupForm(forms.Form):
         user.last_name = self.cleaned_data['last_name']
         user.college = self.cleaned_data['college']
         user.email = self.cleaned_data['email']
-        user.phone = self.cleaned_data['phone_number']
+        user.phone = self.cleaned_data['phone']
         user.city = self.cleaned_data['city']
         user.gender = self.cleaned_data['gender']
         user.save()
