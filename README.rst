@@ -50,6 +50,10 @@ Installation
   http://django-allauth.readthedocs.io/en/latest/providers.html#google
 
 
+Deploying to heroku
+^^^^^^^^^^^^^^^^^^^^^
+* Set environment variables:
+    * DJANGO_SECRET_KEY
 
 
 Setting Up Your Users
