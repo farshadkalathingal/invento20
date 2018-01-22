@@ -29,7 +29,8 @@ EMAIL_PORT = 1025
 
 EMAIL_HOST = 'localhost'
 
-ALLOWED_HOSTS = ['03515115.ngrok.io', '127.0.0.1']
+#ngrok can be used for tunneling from localhost
+ALLOWED_HOSTS = ['59a633ad.ngrok.io', '127.0.0.1', 'localhost', '192.168.0.130']
 
 # CACHING
 # ------------------------------------------------------------------------------

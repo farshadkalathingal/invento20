@@ -46,7 +46,8 @@ Installation
 
 * For Google login to work, Create a new social application at http://127.0.0.1:8000/admin/socialaccount/socialapp/
   Add the client id and secret key obtained from registering at google.
-  (http://django-allauth.readthedocs.io/en/latest/providers.html#google)
+  Learn how to do that from the link below:
+  http://django-allauth.readthedocs.io/en/latest/providers.html#google
 
 
 
