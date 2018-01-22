@@ -1,0 +1,3 @@
+#Heroku requires a requirements.txt on the root folder
+
+-r requirements/production.txt
