@@ -1,9 +1,17 @@
 #!/usr/bin/env python
 import os
 import sys
+import environ
 
 if __name__ == '__main__':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')
+    env = environ.Env()
+    
+    #if .env exists we're expecting a dev enironment, hence config.settings.local is loaded
+    READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
+    if READ_DOT_ENV_FILE:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')
+    else:
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.production')
 
     try:
         from django.core.management import execute_from_command_line
