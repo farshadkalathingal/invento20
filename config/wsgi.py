@@ -39,7 +39,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
 application = get_wsgi_application()
 if os.environ.get('DJANGO_SETTINGS_MODULE') == 'config.settings.production':
     application = Sentry(application)
-    application = DjangoWhiteNoise(application)
+application = DjangoWhiteNoise(application)
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
