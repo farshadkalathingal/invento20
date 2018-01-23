@@ -23,6 +23,7 @@ from django.core.wsgi import get_wsgi_application
 app_path = os.path.dirname(os.path.abspath(__file__)).replace('/config', '')
 sys.path.append(os.path.join(app_path, 'invento18'))
 
+print(os.environ.get('DJANGO_SETTINGS_MODULE') + "im from wsgi")
 if os.environ.get('DJANGO_SETTINGS_MODULE') == 'config.settings.production':
     from raven.contrib.django.raven_compat.middleware.wsgi import Sentry
     from whitenoise.django import DjangoWhiteNoise
