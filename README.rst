@@ -107,3 +107,4 @@ Deployment
 The following details how to deploy this application.
 
 Coming soon
+TODO: Turn off DJANGO_DEBUG
