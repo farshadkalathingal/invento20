@@ -57,6 +57,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     # custom users app
     'invento18.users.apps.UsersConfig',
+    'invento18.events.apps.EventsConfig',
     # Your stuff: custom apps go here
 ]
 

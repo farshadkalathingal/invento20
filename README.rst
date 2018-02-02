@@ -40,9 +40,9 @@ Installation
 
 * Perform migrations and start the server.
 
-  `$ python manage.py migrate`
+  ```$ python manage.py migrate```
 
-  `$ python manage.py runserver`
+  ```$ python manage.py runserver```
 
 * For Google login to work, Create a new social application at http://127.0.0.1:8000/admin/socialaccount/socialapp/
   Add the client id and secret key obtained from registering at google.
@@ -78,7 +78,7 @@ Download `MailHog`_ binary
 
 Run the downloaded file using:
 
-  $./MailHog_something
+  $ ./MailHog_something
 
 Assuming the downloaded file is named MailHog_something
 
@@ -104,7 +104,5 @@ You must set the DSN url in production.
 Deployment
 ----------
 
-The following details how to deploy this application.
 
-Coming soon
 TODO: Turn off DJANGO_DEBUG
