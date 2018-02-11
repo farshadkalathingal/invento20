@@ -16,9 +16,10 @@ class Event(models.Model):
     fee = models.PositiveIntegerField()# Set zero for free events
     coordinators = models.TextField(max_length=100)
 
-
+    def __str__(self):
+        return self.title
 
 class ImageUrl(models.Model):
     name = models.CharField(max_length=50, blank=True)
     url = models.URLField()
-    event = models.ForeignKey(to=Event)
+    event = models.ForeignKey(Event, related_name='image_url')

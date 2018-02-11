@@ -5,6 +5,8 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+from invento18.events.views import EventDetailView
+
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
@@ -15,6 +17,9 @@ urlpatterns = [
     # User management
     url(r'^users/', include('invento18.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
+
+    url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view')
+
 
     # Your stuff: custom urls includes go here
 
