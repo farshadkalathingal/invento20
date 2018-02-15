@@ -1,106 +1,398 @@
-{% load static i18n %}<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}Invento18{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% extends "layout.html" %}
+{% load static i18n %}
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+{% block content %}
 
-    {% block css %}
-    <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
-    
-    <!-- This file stores project-specific CSS -->
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
-    {% endblock %}
 
-  </head>
+    <!-- Banner -->
+    <!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
 
-  <body>
 
-    <div class="m-b-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'home' %}">Invento18</a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
+    <section id="banner" data-video="{% static 'images/banner' %}">
+
+        <div class="inner">
+            <header>
+
+                <h1>INVENTO'18</h1>
+                <h2>ANNUAL MULTIFEST</h2>
+                <h3>MARCH 16 17 18</h3>
+                <h4>GOVERNEMENT ENGINEERING COLLEGE SREEKRISHNAPURAM PALAKKAD</h4>
+            </header>
+            <a href="#main" class="button big special scrolly">Lets Invento!</a>
         </div>
-      </nav>
+
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        <section class="wrapper style1">
+            <div class="inner">
+                <header class="align-center">
+                    <h2>Main Events</h2>
+                    <p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
+                </header>
+                <!-- 2 Column Video Section -->
+                <div class="flex flex-3">
+                    <div class="video col">
+                        <div class="image fit">
+                            <img src="{% static 'images/dj.jpg' %}" alt="" />
+
+                        </div>
+                        <p class="caption">
+                            EDM NIGHT
+                        </p>
+                        <a href="generic.html" class="link">
+                            <span>Click Me</span>
+                        </a>
+                    </div>
+                    <div class="video col">
+                        <div class="image fit">
+                            <img src="{% static 'images/natya.jpg' %}" alt="" />
+
+                        </div>
+                        <p class="caption">
+                            NATYA
+                        </p>
+                        <a href="generic.html" class="link">
+                            <span>Click Me</span>
+                        </a>
+                    </div>
+                    <div class="video col">
+                        <div class="image fit">
+                            <img src="{% static 'images/dj2.jpg' %}" alt="" />
+
+                        </div>
+                        <p class="caption">
+                            BAND WAR
+                        </p>
+                        <a href="generic.html" class="link">
+                            <span>Click Me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two -->
+        <section class="wrapper style2">
+            <div class="inner">
+                <header>
+                    <h2>Mark The Dates</h2>
+                    <p>Fusce fringilla enim sit amet lectus sollicitudin, eu tincidunt odio semper.</p>
+                </header>
+                <!-- Tabbed Video Section -->
+                <div class="flex flex-tabs">
+                    <ul class="tab-list">
+                        <li>
+                            <a href="#" data-tab="tab-1" class="active">MARCH 16</a>
+                        </li>
+                        <li>
+                            <a href="#" data-tab="tab-2">MARCH 17</a>
+                        </li>
+                        <li>
+                            <a href="#" data-tab="tab-3">MARCH 18</a>
+                        </li>
+                    </ul>
+                    <div class="tabs">
+
+                        <!-- Tab 1 -->
+                        <div class="tab tab-1 flex flex-3 active">
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic01.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic02.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic03.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic04.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic05.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic06.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2 -->
+                        <div class="tab tab-2 flex flex-3">
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic06.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic05.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic04.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic03.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic02.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic01.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3 -->
+                        <div class="tab tab-3 flex flex-3">
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic03.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic02.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic01.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic06.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic05.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                            <!-- Video Thumbnail -->
+                            <div class="video col">
+                                <div class="image fit">
+                                    <img src="{% static 'images/pic04.jpg' %}" alt="" />
+                                    <div class="arrow">
+                                        <div class="icon fa-play"></div>
+                                    </div>
+                                </div>
+                                <a href="generic.html" class="link">
+                                    <span>Click Me</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section class="wrapper ">
+            <div class="inner">
+                <header class="align-center">
+                    <h2>Aliquam ipsum purus dolor</h2>
+                    <p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
+                </header>
+
+                <!-- 3 Column Video Section -->
+                <div class="flex flex-3">
+                    <div class="video col">
+                        <div class="image fit">
+                            <img src="{% static 'images/pic09.jpg' %}" alt="" />
+                            <div class="arrow">
+                                <div class="icon fa-play"></div>
+                            </div>
+                        </div>
+                        <p class="caption">
+                            Cras eget lacus sed mauris scelerisque tincidunt
+                        </p>
+                        <a href="generic.html" class="link">
+                            <span>Click Me</span>
+                        </a>
+                    </div>
+                    <div class="video col">
+                        <div class="image fit">
+                            <img src="{% static 'images/pic10.jpg' %}" alt="" />
+                            <div class="arrow">
+                                <div class="icon fa-play"></div>
+                            </div>
+                        </div>
+                        <p class="caption">
+                            Vivamus vulputate lacus non massa auctor lobortis
+                        </p>
+                        <a href="generic.html" class="link">
+                            <span>Click Me</span>
+                        </a>
+                    </div>
+                    <div class="video col">
+                        <div class="image fit">
+                            <img src="{% static 'images/pic11.jpg' %}" alt="" />
+                            <div class="arrow">
+                                <div class="icon fa-play"></div>
+                            </div>
+                        </div>
+                        <p class="caption">
+                            Nam eu nisi non ante sodales interdum a vitae neque
+                        </p>
+                        <a href="generic.html" class="link">
+                            <span>Click Me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
 
-    <div class="container">
 
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-          {% endfor %}
-      {% endif %}
-
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
-
-    </div> <!-- /container -->
-
-    {% block modal %}{% endblock modal %}
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
-      <!-- Required by Bootstrap v4 beta -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-      <!-- Your stuff: Third-party javascript libraries go here -->
-
-      <!-- place project specific Javascript in this file -->
-      
-      <script src="{% static 'js/project.js' %}"></script>
-      
-
-    {% endblock javascript %}
-  </body>
-</html>
- 
+{% endblock %}
