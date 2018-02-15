@@ -10,6 +10,9 @@ from invento18.events.views import EventDetailView
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
+    url(r'^elements/$', TemplateView.as_view(template_name='pages/elements.html'), name='elements'),
+    url(r'^generic/$', TemplateView.as_view(template_name='pages/generic.html'), name='generic'),
+    url(r'^parallax/$', TemplateView.as_view(template_name='pages/parallax.html'), name='parallax'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),

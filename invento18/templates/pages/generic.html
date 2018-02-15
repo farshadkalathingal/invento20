@@ -1,33 +1,7 @@
-<!DOCTYPE HTML>
-<!--
-	Broadcast by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>Generic - Broadcast by TEMPLATED</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+{% extends "base.html" %}
+{% load static %}
 
-	</head>
-	<body class="subpage">
-		<div>
- 	<!-- Header -->
-			<header id="header">
-				<img id="logo" align="left" width="250px" height="auto" src="images/LOGO_white.png" alt="">
-				<a href="#menu">Menu</a>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Events</a></li>
-					<li><a href="elements.html">Login</a></li>
-				</ul>
-			</nav>
+{% block content %}
 
 		<!-- Main -->
 			<div id="main">
@@ -159,6 +133,4 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-
-	</body>
-</html>
+{% endblock %}
