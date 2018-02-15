@@ -4,19 +4,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
-from rest_framework import routers, serializers, viewsets
+from rest_framework import routers
 
 from invento18.events.views import EventDetailView
-from invento18.events.models import Event, ImageUrl
-
-class EventSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ImageUrl
-        fields = ('name', 'url', 'event')
-
-class EventViewSet(viewsets.ModelViewSet):
-    queryset = ImageUrl.objects.all()
-    serializer_class = EventSerializer
+from invento18.events.serializers import EventViewSet
 
 router = routers.DefaultRouter()
 router.register(r'api/v1/events', EventViewSet)
