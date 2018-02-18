@@ -15,10 +15,6 @@
 
 		 {% block css %}
 
-		<!-- Latest compiled and minified Bootstrap 4 beta CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-			crossorigin="anonymous">
-
 		<!-- Your stuff: Third-party CSS libraries go here -->
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 
@@ -29,8 +25,8 @@
 		 {% endblock %}
 
 	</head>
-	<body>
-
+	<body class="subpage">
+		<div>
 		<!-- Header -->
 			<header id="header">
 				<img id="logo" align="left" width="250px" height="auto" src="{% static 'images/LOGO_white.png' %}" alt="">
@@ -51,14 +47,6 @@
 					<li><a href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
 				</ul>
 			</nav>
-
-			<!-- Banner -->
-			<!--
-				To use a video as your background, set data-video to the name of your video without
-				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-				formats to work correctly.
-			-->
-
 
 		{% block content %}
 
@@ -108,6 +96,7 @@
 					&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Coverr</a>. Video: <a href="https://coverr.co">Coverr</a>.
 				</div>
 			</footer>
+		</div>
 
 		{% block javascript %}
 		<!-- Required by Bootstrap v4 beta -->
@@ -127,6 +116,15 @@
 		<script src="{% static 'js/skel.min.js' %}"></script>
 		<script src="{% static 'js/util.js' %}"></script>
 		<script src="{% static 'js/main.js' %}"></script>
+		<script type="text/javascript">
+    window._chatlio = window._chatlio||[];
+    !function(){ var t=document.getElementById("chatlio-widget-embed");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3");
+       n.setAttribute('data-widget-id','c64731a4-cefd-4fcc-5344-b8666c39b0a4');
+       c.parentNode.insertBefore(n,c);
+    }();
+</script>
+
+
 
 		<!-- place project specific Javascript in this file -->
 
