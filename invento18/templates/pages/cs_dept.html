@@ -1,0 +1,225 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block title %} CSE {% endblock title %}
+
+{% block css %}
+
+<!-- Your stuff: Third-party CSS libraries go here -->
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+<!-- This file stores project-specific CSS -->
+<link href="{% static 'css/project.css' %}" rel="stylesheet"> 
+<link href="{% static 'css/dept.css' %}" rel="stylesheet">
+
+
+<style>
+
+
+* { box-sizing: border-box; } canvas { position: absolute; display: block; width: 100%; height: 100%; background: #000;
+z-index:1; }
+
+</style>
+
+{% endblock %}
+
+
+{% block deptbanner %}
+  <canvas id="c"></canvas> 
+{% endblock deptbanner %}
+
+
+
+
+{% block content %}
+
+
+
+
+
+
+
+			<!-- One -->
+			<section id="departmentbanner" >
+
+				<div class="inner">
+					<header>
+
+						<h1 >DEPT OF COMPUTER SCIENCE</h1>
+
+					</header>
+
+				</div>
+
+			</section>
+
+		<!-- Main -->
+			<div id="main">
+
+        <section class="wrapper style1">
+          <div class="inner">
+            <header class="align-left">
+              <h2> EVENTS</h2>
+
+            </header>
+            <!-- 2 Column Video Section -->
+              <div class="flex flex-3">
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/dj.jpg' %}" alt="" />
+
+                  </div>
+
+                  <h1 class="caption">
+                    EDM NIGHT
+
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+
+                </div>
+
+
+
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/natya.jpg' %}" alt="" />
+
+                  </div>
+                  <h1 class="caption">
+                    NATYA
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+                </div>
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/dj2.jpg' %}" alt=""/>
+
+                  </div>
+                  <h1 class="caption">
+                    BAND WAR
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+                </div>
+              </div>
+          </div>
+        </section>
+
+				<hr>
+
+        <section class="wrapper style1">
+          <div class="inner">
+            <header class="align-left">
+              <h2> TALKS</h2>
+
+            </header>
+            <!-- 2 Column Video Section -->
+              <div class="flex flex-3">
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/dj.jpg' %}" alt="" />
+
+                  </div>
+
+                  <h1 class="caption">
+                    EDM NIGHT
+
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+
+                </div>
+
+
+
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/natya.jpg' %}" alt="" />
+
+                  </div>
+                  <h1 class="caption">
+                    NATYA
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+                </div>
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/dj2.jpg' %}" alt=""/>
+
+                  </div>
+                  <h1 class="caption">
+                    BAND WAR
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+                </div>
+              </div>
+          </div>
+        </section>
+
+				<hr>
+
+        <section class="wrapper style1">
+          <div class="inner">
+            <header class="align-left">
+              <h2> WORKSHOPS</h2>
+
+            </header>
+            <!-- 2 Column Video Section -->
+              <div class="flex flex-3">
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/dj.jpg' %}" alt="" />
+
+                  </div>
+
+                  <h1 class="caption">
+                    EDM NIGHT
+
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+
+                </div>
+
+
+
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/natya.jpg' %}" alt="" />
+
+                  </div>
+                  <h1 class="caption">
+                    NATYA
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+                </div>
+                <div class="video col">
+                  <div class="image fit">
+                    <img src="{% static 'images/dj2.jpg' %}" alt=""/>
+
+                  </div>
+                  <h1 class="caption">
+                    BAND WAR
+                  </h1>
+                  <a href="generic.html" class="link"><span>Click Me</span></a>
+                </div>
+              </div>
+          </div>
+        </section>
+
+
+      <hr />
+
+    </div>
+  
+
+{% endblock %}
+
+
+{% block javascript %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="{% static 'js/index0.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/skel.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,333 @@
+/* my styles  */
+#logo{
+  padding-left: 12px;
+  padding-top: 12px;
+}
+@media screen and (max-width: 980px) {
+
+  #footer > .inner {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 736px) {
+
+  #logo{
+    width: 190px;
+    padding-top:7px;
+  }
+
+
+}
+.video{
+  box-shadow: 3px 3px 15px black;
+}
+
+
+
+
+/* Banner */
+
+  #detailbanner {
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    padding: 8em 0 6em 0;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    background-image: url("../../images/hiphop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 0;
+    min-height: 100vh;
+    height: 100vh !important;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+
+    #detailbanner .inner {
+      -moz-transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+      transform: scale(1.0);
+      -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+      -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+      -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+      transition: opacity 1s ease, transform 1s ease;
+      opacity: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    #detailbanner h1 {
+      font-size: 6em;
+      margin-bottom: .25em;
+    }
+
+    #detailbanner p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1.5em;
+    }
+
+    #detailbanner video {
+      -moz-transform: translateX(50%) translateY(50%);
+      -webkit-transform: translateX(50%) translateY(50%);
+      -ms-transform: translateX(50%) translateY(50%);
+      transform: translateX(50%) translateY(50%);
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+    }
+
+    #detailbanner:before {
+      -moz-transition: opacity 3s ease;
+      -webkit-transition: opacity 3s ease;
+      -ms-transition: opacity 3s ease;
+      transition: opacity 3s ease;
+      -moz-transition-delay: 1.25s;
+      -webkit-transition-delay: 1.25s;
+      -ms-transition-delay: 1.25s;
+      transition-delay: 1.25s;
+      content: '';
+      display: block;
+      background-color: #041625;
+      height: 100%;
+      left: 0;
+      opacity: 0.45;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 1280px) {
+
+      #detailbanner video {
+        display: none;
+      }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+      #detailbanner {
+        min-height: 0;
+        height: auto !important;
+        padding: 4em 2em;
+      }
+
+        #detailbanner .inner {
+          width: 100%;
+        }
+
+        #detailbanner h1 {
+          font-size: 1.75em;
+          margin-bottom: 0.5em;
+          padding-bottom: 0;
+        }
+
+        #detailbanner p {
+          font-size: 1.25em;
+        }
+
+        #detailbanner br {
+          display: none;
+        }
+
+        #detailbanner .button {
+          width: 100%;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+      #detailbanner p {
+        font-size: 1em;
+      }
+
+    }
+
+    body.is-loading #detailbanner .inner {
+      -moz-transform: scale(0.99);
+      -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+      transform: scale(0.99);
+      opacity: 0;
+    }
+
+    body.is-loading #detailbanner:before {
+      opacity: 1;
+    }
+
+.caption{
+background: #02072a;
+
+
+}
+
+#departmentbanner {
+display: -ms-flexbox;
+-ms-flex-pack: center;
+-ms-flex-align: center;
+padding: 8em 0 6em 0;
+-moz-align-items: center;
+-webkit-align-items: center;
+-ms-align-items: center;
+align-items: center;
+display: -moz-flex;
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+-moz-justify-content: center;
+-webkit-justify-content: center;
+-ms-justify-content: center;
+justify-content: center;
+background-image: url("../../");
+background-color: black;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+border-top: 0;
+min-height: 100vh;
+height: 100vh !important;
+position: relative;
+text-align: center;
+overflow: hidden;
+}
+
+#departmentbanner .inner {
+-moz-transform: scale(1.0);
+-webkit-transform: scale(1.0);
+-ms-transform: scale(1.0);
+transform: scale(1.0);
+-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+transition: opacity 1s ease, transform 1s ease;
+opacity: 1;
+position: relative;
+z-index: 2;
+}
+
+#departmentbanner h1 {
+font-size: 6em;
+margin-bottom: .25em;
+}
+
+#departmentbanner p {
+color: rgba(255, 255, 255, 0.65);
+font-size: 1.5em;
+}
+
+#departmentbanner video {
+-moz-transform: translateX(50%) translateY(50%);
+-webkit-transform: translateX(50%) translateY(50%);
+-ms-transform: translateX(50%) translateY(50%);
+transform: translateX(50%) translateY(50%);
+position: absolute;
+bottom: 50%;
+right: 50%;
+width: auto;
+height: auto;
+min-width: 100%;
+min-height: 100%;
+overflow: hidden;
+}
+
+#departmentbanner:before {
+-moz-transition: opacity 3s ease;
+-webkit-transition: opacity 3s ease;
+-ms-transition: opacity 3s ease;
+transition: opacity 3s ease;
+-moz-transition-delay: 1.25s;
+-webkit-transition-delay: 1.25s;
+-ms-transition-delay: 1.25s;
+transition-delay: 1.25s;
+content: '';
+display: block;
+/*background-color: #041625;*/
+height: 100%;
+left: 0;
+opacity: 0.45;
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 1;
+}
+
+@media screen and (max-width: 1280px) {
+
+#departmentbanner video {
+  display: none;
+}
+
+}
+
+@media screen and (max-width: 736px) {
+
+#departmentbanner {
+  min-height: 0;
+  height: auto !important;
+  padding: 4em 2em;
+}
+
+  #departmentbanner .inner {
+    width: 100%;
+  }
+
+  #departmentbanner h1 {
+    font-size: 1.75em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0;
+  }
+
+  #departmentbanner p {
+    font-size: 1.25em;
+  }
+
+  #departmentbanner br {
+    display: none;
+  }
+
+  #departmentbanner .button {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+#departmentbanner p {
+  font-size: 1em;
+}
+
+}
+
+body.is-loading #departmentbanner .inner {
+-moz-transform: scale(0.99);
+-webkit-transform: scale(0.99);
+-ms-transform: scale(0.99);
+transform: scale(0.99);
+opacity: 0;
+}
+
+body.is-loading #departmentbanner:before {
+opacity: 1;
+}
