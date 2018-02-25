@@ -10,6 +10,8 @@
 
 /* Reset */
 
+
+	}
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -1658,7 +1660,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 700;
-		line-height: 1.5;
+		line-height: 0.9;
 		margin: 0 0 1em 0;
 	}
 
@@ -1668,7 +1670,7 @@
 		}
 
 	h2 {
-		font-size: 2.5em;
+		font-size: 2.8em;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -1709,6 +1711,13 @@
 
 	h4 {
 		font-size: 1.5em;
+	}
+	@media screen and (max-width: 480px) {
+
+		h4 {
+			font-size: 0.9em;
+		}
+
 	}
 
 	h5 {
@@ -2679,12 +2688,12 @@
 		}
 
 			ul.tab-list li a.active {
-				background: #aa14cc;
+				background: #D10459;
 				color: #fff !important;
 			}
 
 			ul.tab-list li a:hover {
-				background: #693dcc;
+				background: #6DFDFF;
 				color: #fff !important;
 			}
 
@@ -2805,7 +2814,7 @@
 			background-image: url(../images/bg.jpg);
 			background-size: cover;
 			background-repeat: no-repeat;
-			opacity: 0.35;
+			opacity: -0.65;
 			z-index: 1;
 		}
 
@@ -2829,7 +2838,7 @@
 			}
 
 		.wrapper.style1 {
-			background-color: #062038;
+			background-color: #03051a;
 			color: #c1c7cd;
 		}
 
@@ -3370,7 +3379,7 @@
 		background: rgba(4, 22, 37, 0.75);
 		color: #c0c5c9;
 		cursor: default;
-		height: 3.25em;
+		height: 5.25em;
 		left: 0;
 		line-height: 3.25em;
 		position: fixed;
@@ -3411,7 +3420,8 @@
 			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
 			display: inline-block;
-			padding: 0 0.75em;
+			padding-left: 0.75em;
+			padding-top: 0.75em;
 			color: inherit;
 			text-decoration: none;
 		}
@@ -3461,7 +3471,7 @@
 					}
 
 					#header > a:last-child {
-						padding-right: 1em;
+						padding-right: 2em;
 					}
 
 			}
@@ -3638,7 +3648,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../images/banner.jpg");
+		/* background-image: url("../images/banner.jpg"); */
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -3665,7 +3675,7 @@
 		}
 
 		#banner h1 {
-			font-size: 4em;
+			font-size: 6em;
 			margin-bottom: .25em;
 		}
 
@@ -3722,7 +3732,7 @@
 
 			#banner {
 				min-height: 0;
-				height: auto !important;
+				height: 100%;
 				padding: 4em 2em;
 			}
 
@@ -3751,6 +3761,8 @@
 		}
 
 		@media screen and (max-width: 480px) {
+
+
 
 			#banner p {
 				font-size: 1em;
@@ -3816,5 +3828,7 @@
 			#footer {
 				padding: 3em 0 1em 0;
 			}
+
+
 
 		}

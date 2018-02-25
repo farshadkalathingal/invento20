@@ -4,6 +4,11 @@
 display: initial;
 }
 
+#logo{
+  padding-left: 12px;
+  padding-top: 12px;
+}
+
 .alert-debug {
   color: black;
   background-color: white;
@@ -91,10 +96,6 @@ ul.tab-list li a:hover {
   }
 
 
-  #logo{
-    padding-left: 12px;
-    padding-top: 12px;
-  }
   @media screen and (max-width: 980px) {
 
     #footer > .inner {

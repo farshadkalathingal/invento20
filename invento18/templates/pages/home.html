@@ -2,24 +2,46 @@
 {% load static %}
 
 {% block content %}
-<!-- Banner -->
-<!--
-To use a video as your background, set data-video to the name of your video without
-its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-formats to work correctly.
--->
 
-<section id="banner" data-video="{% static 'images/banner' %}">
+<link rel="stylesheet" href="{% static 'css/textstyle.css' %}" />
+<link rel="stylesheet" href="{% static 'css/project.css' %}" />
 
+<style media="screen">
+canvas{
+  z-index: -1;
+  position: fixed;
+}
+@media screen and (max-width: 480px) {
+  #banner p {
+    font-size: 1em;
+  }
+}
+</style>
+
+<canvas id="canvas"></canvas>
+<section id="banner">
   <div class="inner">
     <header>
 
-      <h1>INVENTO'18</h1>
-      <h2>ANNUAL MULTIFEST</h2>
+      <svg viewBox="0 0 960 300">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="80%">INVENTO'18</text>
+        </symbol>
+
+        <g class = "g-ants">
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+      </svg>
+
+
       <h3>MARCH 16 17 18</h3>
-      <h4>GOVERNEMENT ENGINEERING COLLEGE SREEKRISHNAPURAM PALAKKAD</h4>
+
     </header>
-    <a href="#main" class="button big special scrolly">Lets Invento!</a>
+    <a href="#main" class="button special js-scroll-trigger">Let's Invento</a>
   </div>
 
 </section>
@@ -364,5 +386,6 @@ formats to work correctly.
 
 </div>
 
+<script src="{% static 'js/canvas.js' %}"></script>
 
 {% endblock %}
