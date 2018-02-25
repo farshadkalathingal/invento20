@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
-from invento18.events.views import EventDetailView
+from invento18.events.views import EventDetailView, departmentview
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
@@ -14,12 +14,14 @@ urlpatterns = [
     url(r'^generic/$', TemplateView.as_view(template_name='pages/generic.html'), name='generic'),
     url(r'^generic1/$', TemplateView.as_view(template_name='pages/generic1.html'), name='generic1'),
     url(r'^generic2/$', TemplateView.as_view(template_name='pages/generic2.html'), name='generic2'),
-    
-    url(r'^parallax/$', TemplateView.as_view(template_name='pages/parallax.html'), name='parallax'),
-    url(r'^cse/$', TemplateView.as_view(template_name='pages/cs_dept.html'), name='cse'),
-    url(r'^ec/$', TemplateView.as_view(template_name='pages/ec_dept.html'), name='ec'),
-    url(r'^it/$', TemplateView.as_view(template_name='pages/it_dept.html'), name='it'),
-    
+
+    url(r'^cse/$', departmentview, name='cse'),
+    url(r'^ece/$', departmentview, name='ece'),
+    url(r'^eee/$', departmentview, name='eee'),
+    url(r'^it/$', departmentview, name='it'),
+    url(r'^mt/$', departmentview, name='me'),
+
+    url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),
@@ -28,7 +30,6 @@ urlpatterns = [
     url(r'^users/', include('invento18.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
 
-    url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view')
 
 
     # Your stuff: custom urls includes go here

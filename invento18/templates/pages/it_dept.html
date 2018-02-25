@@ -11,7 +11,7 @@
 
 	<style>
 	#departmentbanner{
-		background-color: #3c98d5;
+		background: -webkit-linear-gradient(left, #2F2727, red );
 	}
 	.caption{
 		background-color:#3c98d5;
@@ -547,183 +547,94 @@
 			</section>
 
 
+			<!-- Main -->
+			<div id="main">
 
-<!-- Main -->
-<div id="main">
+			  <!-- Workshops -->
+			  <section class="wrapper style1">
+			    <div class="inner">
+			      <header class="align-left">
+			        <h2> WORKSHOPS </h2>
+			      </header>
 
-	<section class="wrapper style1">
-		<div class="inner">
-			<header class="align-left">
-				<h2> EVENTS</h2>
+			      <div class="flex flex-3">
 
-			</header>
-			<!-- 2 Column Video Section -->
-			<div class="flex flex-3">
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/dj.jpg' %}" alt="" />
+			        {% for workshop in workshops %}
+			          <div class="video col">
+			            <div class="image fit">
+			              <img src="{{ workshop.imageurl }}" alt="" />
+			            </div>
+			            <h1 class="caption">
+			              {{ workshop.title }}
+			            </h1>
+			            <a href="/events/{{ workshop.pk }}" class="link"><span>Click Me</span></a>
+			          </div>
+			      {% endfor %}
 
-					</div>
+			    </div>
 
-					<h1 class="caption">
-						EDM NIGHT
+			    </div>
+			  </section>
 
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
+			<!-- Shows -->
+			  <section class="wrapper style1">
+			    <div class="inner">
+			      <header class="align-left">
+			        <h2> SHOWS </h2>
+			      </header>
 
-				</div>
+			      <div class="flex flex-3">
+
+			        {% for show in shows %}
+			          <div class="video col">
+			            <div class="image fit">
+			              <img src="{{ show.imageurl }}" alt="" />
+			            </div>
+			            <h1 class="caption">
+			              {{ show.title }}
+			            </h1>
+			            <a href="/events/{{ show.pk }}" class="link"><span>Click Me</span></a>
+			          </div>
+			      {% endfor %}
+
+			    </div>
+
+			    </div>
+			  </section>
+
+			<!-- Competitions -->
+			  <section class="wrapper style1">
+			    <div class="inner">
+			      <header class="align-left">
+			        <h2> COMPETITIONS </h2>
+			      </header>
+
+			      <div class="flex flex-3">
+
+			        {% for competition in competitions %}
+			          <div class="video col">
+			            <div class="image fit">
+			              <img src="{{ competition.imageurl }}" alt="" />
+			            </div>
+			            <h1 class="caption">
+			              {{ competition.title }}
+			            </h1>
+			            <a href="/events/{{ competition.pk }}" class="link"><span>Click Me</span></a>
+			          </div>
+			      {% endfor %}
+
+			    </div>
+
+			    </div>
+			  </section>
 
 
 
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/natya.jpg' %}" alt="" />
-
-					</div>
-					<h1 class="caption">
-						NATYA
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-				</div>
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/dj2.jpg' %}" alt="" />
-
-					</div>
-					<h1 class="caption">
-						BAND WAR
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-				</div>
 			</div>
-		</div>
-	</section>
 
-	<hr>
-
-	<section class="wrapper style1">
-		<div class="inner">
-			<header class="align-left">
-				<h2> TALKS</h2>
-
-			</header>
-			<!-- 2 Column Video Section -->
-			<div class="flex flex-3">
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/dj.jpg' %}" alt="" />
-
-					</div>
-
-					<h1 class="caption">
-						EDM NIGHT
-
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-
-				</div>
+{% endblock %}
 
 
-
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/natya.jpg' %}" alt="" />
-
-					</div>
-					<h1 class="caption">
-						NATYA
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-				</div>
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/dj2.jpg' %}" alt="" />
-
-					</div>
-					<h1 class="caption">
-						BAND WAR
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<hr>
-
-	<section class="wrapper style1">
-		<div class="inner">
-			<header class="align-left">
-				<h2> WORKSHOPS</h2>
-
-			</header>
-			<!-- 2 Column Video Section -->
-			<div class="flex flex-3">
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/dj.jpg' %}" alt="" />
-
-					</div>
-
-					<h1 class="caption">
-						EDM NIGHT
-
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-
-				</div>
-
-
-
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/natya.jpg' %}" alt="" />
-
-					</div>
-					<h1 class="caption">
-						NATYA
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-				</div>
-				<div class="video col">
-					<div class="image fit">
-						<img src="{% static 'images/dj2.jpg' %}" alt="" />
-
-					</div>
-					<h1 class="caption">
-						BAND WAR
-					</h1>
-					<a href="generic.html" class="link">
-						<span>Click Me</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<hr />
-
-</div>
-{% endblock %} 
-	 
-	 
 {% block javascript %}
 
 
@@ -734,7 +645,7 @@
 		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
 		<script src="{% static 'js/skel.min.js' %}"></script>
 		<script src="{% static 'js/util.js' %}"></script>
-		<script src="{% static 'js/main.js' %}"></script> 
+		<script src="{% static 'js/main.js' %}"></script>
 
 {% endblock %}
 

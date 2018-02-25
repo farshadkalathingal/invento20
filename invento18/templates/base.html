@@ -28,13 +28,16 @@
 	<body class="subpage">
 		 {% block deptbanner %}
 		 {% endblock deptbanner %}
+		 {% block other %}
+		 {% endblock other %}
 
 		<div>
 		<!-- Header -->
 			<header id="header">
-				
+
+				<a href='/'>
 				<img id="logo" align="left" width="250px" height="auto" src="{% static 'images/LOGO_white.png' %}" alt="">
-				
+				</a>
 				<a href="#menu">Menu</a>
 			</header>
 
@@ -102,7 +105,6 @@
 			</footer>
 		</div>
 
-		{% block javascript %}
 		<!-- Required by Bootstrap v4 beta -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 			crossorigin="anonymous"></script>
@@ -133,6 +135,8 @@
 		<!-- place project specific Javascript in this file -->
 
 		<script src="{% static 'js/project.js' %}"></script>
+		{% block javascript %}
+
 		{% endblock javascript %}
 
 
