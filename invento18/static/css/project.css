@@ -1,7 +1,7 @@
 /* These styles are generated from project.scss. */
 
 #header > a{
-display: initial; 
+display: initial;
 }
 
 .alert-debug {
@@ -214,7 +214,7 @@ ul.tab-list li a:hover {
     -webkit-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    background-image: url("../../images/hiphop.jpg");
+    background-image: url("../images/hiphop.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -369,7 +369,7 @@ ul.tab-list li a:hover {
     -webkit-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    background-image: url("../../");
+    background-image: url("../images/hiphop.jpg");
     background-color: black;
     background-position: center;
     background-size: cover;

@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^ece/$', departmentview, name='ece'),
     url(r'^eee/$', departmentview, name='eee'),
     url(r'^it/$', departmentview, name='it'),
-    url(r'^mt/$', departmentview, name='me'),
+    url(r'^me/$', departmentview, name='me'),
 
     url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view'),
 
