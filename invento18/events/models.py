@@ -17,11 +17,11 @@ class Event(models.Model):
     ('oth', 'Other'),
     )
     title = models.CharField(max_length=50)
-    description = models.TextField(max_length=500)
+    description = models.TextField(max_length=2000)
     category = models.CharField(max_length=3, default='gen', choices=category_types)
     _type = models.CharField(max_length=3, default='wor', choices=type_types, verbose_name="Title")
     fee = models.PositiveIntegerField()# Set zero for free events
-    coordinators = models.TextField(max_length=100)
+    coordinators = models.TextField(max_length=500)
     imageurl = models.URLField(blank=True)
     townscript_code = models.CharField(max_length=50, blank=True)
 
