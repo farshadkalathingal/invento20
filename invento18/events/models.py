@@ -13,12 +13,13 @@ class Event(models.Model):
     type_types=(
     ('wor', 'Workshops'),
     ('com', 'Competitions'),
-    ('sho', 'Shows')
+    ('sho', 'Shows'),
+    ('oth', 'Other'),
     )
     title = models.CharField(max_length=50)
     description = models.TextField(max_length=500)
     category = models.CharField(max_length=3, default='gen', choices=category_types)
-    _type = models.CharField(max_length=3, default='wor', choices=type_types)
+    _type = models.CharField(max_length=3, default='wor', choices=type_types, verbose_name="Title")
     fee = models.PositiveIntegerField()# Set zero for free events
     coordinators = models.TextField(max_length=100)
     imageurl = models.URLField(blank=True)
