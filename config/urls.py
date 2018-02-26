@@ -3,6 +3,8 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
+
 from django.views import defaults as default_views
 
 from invento18.events.views import EventDetailView, departmentview
@@ -22,6 +24,8 @@ urlpatterns = [
     url(r'^me/$', departmentview, name='me'),
 
     url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view'),
+    url(r'^wp-content/uploads/2018/02/Invento18-CSE-Brochure.pdf',
+        RedirectView.as_view(url="https://images.inventogec.org/invento18csebrochure.pdf")),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),
