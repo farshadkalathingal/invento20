@@ -24,6 +24,7 @@ class Event(models.Model):
     coordinators = models.TextField(max_length=500)
     day = models.PositiveIntegerField()
     imageurl = models.URLField(blank=True)
+    posterurl = models.URLField(blank=True)
     townscript_code = models.CharField(max_length=50, blank=True)
 
 

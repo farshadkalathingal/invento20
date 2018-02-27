@@ -1,4 +1,18 @@
 /* These styles are generated from project.scss. */
+.image.fit.detail{
+  width: 75%;
+  margin: 0 auto;
+}
+
+.inner{
+    margin-top: -15em;
+}
+
+@media (max-width: 576px) {
+  .inner{
+      margin-top: -5em;
+  }
+}
 
 #header > a{
 display: initial;

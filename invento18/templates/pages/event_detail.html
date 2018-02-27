@@ -21,8 +21,12 @@
             </div> -->
 
 
-            <span class="image fit">
-                <img src="{{event.imageurl}}" alt="" />
+            <span class="image fit detail">
+              <img src="{% if event.posterurl %}
+              {{ event.posterurl }}
+              {% else %}
+              {{ event.imageurl }}
+              {% endif %}" alt="" />
             </span>
 
         </div>
