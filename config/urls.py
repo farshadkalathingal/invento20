@@ -17,6 +17,7 @@ urlpatterns = [
     url(r'^generic1/$', TemplateView.as_view(template_name='pages/generic1.html'), name='generic1'),
     url(r'^generic2/$', TemplateView.as_view(template_name='pages/generic2.html'), name='generic2'),
 
+    url(r'^general/$', departmentview, name='general'),
     url(r'^cse/$', departmentview, name='cse'),
     url(r'^ece/$', departmentview, name='ece'),
     url(r'^eee/$', departmentview, name='eee'),

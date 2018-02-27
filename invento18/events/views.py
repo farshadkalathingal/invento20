@@ -9,26 +9,34 @@ class EventDetailView(DetailView):
 
 def departmentview(request):
 
-    if request.path == '/cse/':
-        dept = 'cse'
-    elif request.path == '/ece/':
-        dept = 'ece'
-    elif request.path == '/eee/':
-        dept = 'eee'
-    elif request.path == '/it/':
-        dept = 'it'
-    elif request.path == '/me/':
-        dept = 'me'
+    if request.path == '/general/':
+        template_name = 'pages/general.html'
+        events = Event.objects.filter(category='gen')
+        return render(request, template_name,
+            {'events' : events }
+        )
 
-    template_name = 'pages/' + dept + '_dept.html'
+    else:
+        if request.path == '/cse/':
+            dept = 'cse'
+        elif request.path == '/ece/':
+            dept = 'ece'
+        elif request.path == '/eee/':
+            dept = 'eee'
+        elif request.path == '/it/':
+            dept = 'it'
+        elif request.path == '/me/':
+            dept = 'me'
 
-    workshops = Event.objects.filter(category=dept, _type='wor')
-    competitions = Event.objects.filter(category=dept, _type='com')
-    shows = Event.objects.filter(category=dept, _type='sho')
+        template_name = 'pages/' + dept + '_dept.html'
 
-    print(dept)
-    return render(request, template_name, {
-    'workshops' : workshops,
-    'competitions' : competitions,
-    'shows' : shows,
-    })
+        workshops = Event.objects.filter(category=dept, _type='wor')
+        competitions = Event.objects.filter(category=dept, _type='com')
+        shows = Event.objects.filter(category=dept, _type='sho')
+
+
+        return render(request, template_name, {
+        'workshops' : workshops,
+        'competitions' : competitions,
+        'shows' : shows,
+        })

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} General Events
+{% endblock title %}
+
+{% block css %}
+
+
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link href="{% static 'css/project.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/dept.css' %}" rel="stylesheet">
+<link href="{% static 'css/project.css' %}" rel="stylesheet">
+
+<style>
+#departmentbanner{
+  background: -webkit-linear-gradient(left, #2F2727, red );
+}
+.caption{
+  background-color:#3c98d5;
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<!-- One -->
+<section id="departmentbanner" >
+
+  <div class="inner">
+    <header>
+      <h1>GENERAL EVENTS</h1>
+    </header>
+  </div>
+</section>
+
+
+<!-- Main -->
+<div id="main">
+
+  <section class="wrapper style1">
+    <div class="inner">
+      <!-- <header class="align-left">
+        <h2>  </h2> -->
+      </header>
+
+      <div class="flex flex-3">
+
+        {% for event in events %}
+        <div class="video col">
+          <div class="image fit">
+            <img src="{{ event.imageurl }}" alt="" />
+          </div>
+          <h1 class="caption">
+            {{ event.title }}
+          </h1>
+          <a href="/events/{{ event.pk }}" class="link"><span>Click Me</span></a>
+        </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+  </section>
+
+
+</div>
+
+{% endblock %}
+
+
+{% block javascript %}
+
+
+<!-- Scripts -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="{% static 'js/index1.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+<script src="{% static 'js/skel.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+{% endblock %}
+
+
+</body>
+</html>
