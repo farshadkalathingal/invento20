@@ -15,7 +15,8 @@ urlpatterns = [
     url(r'^elements/$', TemplateView.as_view(template_name='pages/elements.html'), name='elements'),
     url(r'^generic/$', TemplateView.as_view(template_name='pages/generic.html'), name='generic'),
     url(r'^generic1/$', TemplateView.as_view(template_name='pages/generic1.html'), name='generic1'),
-    url(r'^generic2/$', TemplateView.as_view(template_name='pages/generic2.html'), name='generic2'),
+
+    url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
 
     url(r'^general/$', departmentview, name='general'),
     url(r'^cse/$', departmentview, name='cse'),

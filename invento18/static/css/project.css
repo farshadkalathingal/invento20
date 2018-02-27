@@ -1,7 +1,11 @@
-/* These styles are generated from project.scss. */
-.image.fit.detail{
+
+.image .fit .detail{
   width: 75%;
   margin: 0 auto;
+}
+
+.video .caption {
+  padding: 0.75em;
 }
 
 .inner{

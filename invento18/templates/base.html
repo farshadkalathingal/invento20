@@ -39,7 +39,9 @@
 				<a href='/'>
 				<img id="logo" align="left" width="250px" height="auto" src="{% static 'images/LOGO_white.png' %}" alt="">
 				</a>
+
 				<a href="#menu">Menu</a>
+
 			</header>
 
 
@@ -48,11 +50,7 @@
 				<ul class="links">
 					<li><a href="{% url 'home' %}">Home</a></li>
 					<li><a href="#">Events</a></li>
-					<li><a href="{% url 'account_login' %}">Login</a></li>
-					<li><a href="{% url 'about' %}">About</a></li>
-					<li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
-					<li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
-					<li><a href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
+					<li><a href="{% url '3d' %}">View college in 3d</a></li>
 				</ul>
 			</nav>
 
