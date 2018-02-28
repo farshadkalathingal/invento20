@@ -111,7 +111,7 @@ function render() {
     renderer.render(scene, camera);
 } //
 var loader = new THREE.JSONLoader(true);
-  loader.load('https://images.inventogec.org/nograss.json', handle_load);
+loader.load('https://images.inventogec.org/nograss.json', handle_load);
 var mesh;
 
 function handle_load(geometry, materials) {
@@ -190,10 +190,8 @@ function morning() {
     var material = new THREE.MeshLambertMaterial({
         color: 0xFFA500
     });
-    var pointlight = new THREE.PointLight(0xffffff, 1);
-    scene.add(pointlight);
     var smesh = new THREE.Mesh(geometry, material);
-    //dilight.add(smesh);
+    dilight.add(smesh);
     scene.add(dilight);
     dilight.position.set(0, 500, 200);
     dilight.castShadow = true;
