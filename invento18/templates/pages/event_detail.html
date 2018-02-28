@@ -90,3 +90,18 @@
 
 
 {% endblock %}
+
+{% block css %}
+<!-- Your stuff: Third-party CSS libraries go here -->
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+<!-- This file stores project-specific CSS -->
+<link href="{% static 'css/project.css' %}" rel="stylesheet">
+
+<style>
+.image.fit{
+  width: 75% !important;
+  margin: 0 auto !important;
+}
+</style>
+{% endblock %}
