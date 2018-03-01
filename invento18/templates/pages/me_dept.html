@@ -118,6 +118,7 @@
 <div id="main">
 
   <!-- Workshops -->
+  {% if workshops %}
   <section class="wrapper style1">
     <div class="inner">
       <header class="align-left">
@@ -142,8 +143,10 @@
 
     </div>
   </section>
+  {% endif %}
 
 <!-- Shows -->
+{% if shows %}
   <section class="wrapper style1">
     <div class="inner">
       <header class="align-left">
@@ -168,8 +171,10 @@
 
     </div>
   </section>
+  {% endif %}
 
 <!-- Competitions -->
+{% if shows %}
   <section class="wrapper style1">
     <div class="inner">
       <header class="align-left">
@@ -194,6 +199,7 @@
 
     </div>
   </section>
+  {% endif %}
 
 
 
