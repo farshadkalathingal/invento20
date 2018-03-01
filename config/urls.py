@@ -3,19 +3,35 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
+
 from django.views import defaults as default_views
 from rest_framework import routers
 
-from invento18.events.views import EventDetailView
+from invento18.events.views import EventDetailView, departmentview
 from invento18.events.serializers import EventViewSet
 
 router = routers.DefaultRouter()
 router.register(r'api/v1/events', EventViewSet)
 
+
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^', include(router.urls)),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
+
+    url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
+
+    url(r'^general/$', departmentview, name='general'),
+    url(r'^cse/$', departmentview, name='cse'),
+    url(r'^ece/$', departmentview, name='ece'),
+    url(r'^eee/$', departmentview, name='eee'),
+    url(r'^it/$', departmentview, name='it'),
+    url(r'^me/$', departmentview, name='me'),
+
+    url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view'),
+    url(r'^wp-content/uploads/2018/02/Invento18-CSE-Brochure.pdf',
+        RedirectView.as_view(url="https://images.inventogec.org/invento18csebrochure.pdf")),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),
@@ -25,7 +41,6 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view')
 
 
     # Your stuff: custom urls includes go here

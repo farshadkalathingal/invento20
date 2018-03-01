@@ -1,0 +1,132 @@
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+    /*        margin: 150px 32% auto;*/
+}
+
+.image {
+
+    background-image: url('../images/0.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 20%;
+    height: 25%;
+    margin: 10% 56% auto;
+    animation: animate 2s linear infinite;
+
+}
+
+@keyframes animate {
+    10% {
+        background-image: url('../images/0.png');
+
+    }
+    25% {
+        background-image: url('../images/1.png');
+
+    }
+    50% {
+        background-image: url('../images/2.png');
+
+    }
+    75% {
+        background-image: url('../images/3.png');
+
+    }
+    100% {
+        background-image: url('../images/4.png');
+
+    }
+}
+
+
+
+.wrap {
+    /*        padding-top: 15%;*/
+    /*        top: 499px;*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text {
+    color: #ffffff;
+    display: inline-block;
+    /*        font-family: 'Montserrat', sans-serif;*/
+    /*        margin-left: 5px;*/
+}
+
+.bounceball {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    width: 15px;
+}
+
+.bounceball:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-animation: bounce 500ms alternate infinite ease;
+    animation: bounce 500ms alternate infinite ease;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        top: 30px;
+        height: 5px;
+        border-radius: 60px 60px 20px 20px;
+        -webkit-transform: scaleX(2);
+        transform: scaleX(2);
+    }
+    35% {
+        height: 20px;
+        border-radius: 50%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 50px;
+        height: 5px;
+        border-radius: 60px 60px 20px 20px;
+        -webkit-transform: scaleX(2);
+        transform: scaleX(2);
+    }
+    35% {
+        height: 16px;
+        border-radius: 50%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0;
+    }
+
+
+}
+
+.wrap .text {
+    font-size: 5em;
+}
+
+.loading {
+    /*        margin-left: 100px;*/
+    margin: 50% 47% auto;
+}

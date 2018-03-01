@@ -31,7 +31,7 @@ EMAIL_PORT = 1025
 EMAIL_HOST = 'localhost'
 
 #ngrok can be used for tunneling from localhost
-ALLOWED_HOSTS = ['59a633ad.ngrok.io', '127.0.0.1', 'localhost', '192.168.0.130']
+ALLOWED_HOSTS = ['59a633ad.ngrok.io', '127.0.0.1', 'localhost', '192.168.0.130', '0.0.0.0']
 
 # CACHING
 # ------------------------------------------------------------------------------
@@ -66,3 +66,4 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Your local stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+STATIC_URL='/static/'

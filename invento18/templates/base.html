@@ -1,106 +1,163 @@
-{% load static i18n %}<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}Invento18{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% load static i18n %}
+<!DOCTYPE HTML>
+<!--
+	Broadcast by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113941402-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+		  gtag('config', 'UA-113941402-1');
+		</script>
 
-    {% block css %}
-    <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<title>{% block title %} Invento18 {% endblock title %}</title>
+		<link rel="icon" href="{% static 'images/LOGO_black.png' %}" type="image/png" sizes="16x16">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#03051A" />
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
-    
-    <!-- This file stores project-specific CSS -->
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
-    {% endblock %}
 
-  </head>
+		 {% block css %}
 
-  <body>
+		<!-- Your stuff: Third-party CSS libraries go here -->
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 
-    <div class="m-b-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'home' %}">Invento18</a>
+		<!-- This file stores project-specific CSS -->
+		<link href="{% static 'css/project.css' %}" rel="stylesheet">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
 
-    </div>
+		 {% endblock %}
 
-    <div class="container">
+	</head>
+	<body class="subpage">
+		 {% block deptbanner %}
+		 {% endblock deptbanner %}
+		 {% block other %}
+		 {% endblock other %}
 
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-          {% endfor %}
-      {% endif %}
+		<div>
+		<!-- Header -->
+			<header id="header">
 
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
+				<a href='/'>
+				<img id="logo" align="left" width="250px" height="auto" src="{% static 'images/LOGO_white.png' %}" alt="">
+				</a>
 
-    </div> <!-- /container -->
+				<a href="#menu">Menu</a>
 
-    {% block modal %}{% endblock modal %}
+			</header>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
-      <!-- Required by Bootstrap v4 beta -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-      <!-- Your stuff: Third-party javascript libraries go here -->
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'general' %}">General Events</a></li>
+					<li><a href="{% url 'cse' %}">CSE Events</a></li>
+					<li><a href="{% url 'ece' %}">ECE Events</a></li>
+					<li><a href="{% url 'eee' %}">EEE Events</a></li>
+					<li><a href="{% url 'it' %}">IT Events</a></li>
+					<li><a href="{% url 'me' %}">ME Events</a></li>
+					<li><a href="{% url '3d' %}">View college in 3d</a></li>
+				</ul>
+			</nav>
 
-      <!-- place project specific Javascript in this file -->
-      
-      <script src="{% static 'js/project.js' %}"></script>
-      
+		{% block content %}
 
-    {% endblock javascript %}
-  </body>
+		{% endblock %}
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex flex-3">
+						<div class="col">
+							<h3>Contact Us</h3>
+							<ul class="alt">
+								<li><b>Coordinator</b></li>
+								<li>Mohammed Sajid Musaliyar - 9061842389</li>
+								<li><b>Secretary</b></li>
+								<li>Arathi Menon - 9744331073</li>
+								<li><b>Program Convenor</b></li>
+								<li>Dhilraj Soza - 7736118919</li>
+								<li><b>Staff Coordinator</b></li>
+								<li>Dr Vinita Chellappan - 9495070478</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h3>Address</h3>
+							<ul class="alt">
+								<li>Government Engineering College</li>
+								<li>Mannampatta</li>
+								<li>Sreekrishnapuram</li>
+								<li>Palakkad</li>
+								<li>Kerala</li>
+								<li>Pin 679513</li>
+								<li><b><a href="https://goo.gl/maps/UL5GNMi9VQu">Get Directions on Google Maps</a></b></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h3>Made with <i class="icon fa-heart" style="color:red"></i>	 at GEC Palakkad</h3>
+							<ul class="alt">
+								<li style="text-align:center"><b>./tech_team</b></li>
+								<li style="text-align:center">Found a bug or mistake? Whatsapp: <a href="https://api.whatsapp.com/send?phone=919495397075"><b>+919495397075</a></b></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<ul class="icons">
+						<li><a href="https://twitter.com/inventogec" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://facebook.com/inventogec" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/inventogec/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Required by Bootstrap v4 beta -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+			crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+			crossorigin="anonymous"></script>
+
+		<!-- Your stuff: Third-party javascript libraries go here -->
+		<!-- Scripts -->
+
+
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/util.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+		<script type="text/javascript">
+    window._chatlio = window._chatlio||[];
+    !function(){ var t=document.getElementById("chatlio-widget-embed");if(t&&window.ChatlioReact&&_chatlio.init)return void _chatlio.init(t,ChatlioReact);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments)) }},i=["configure","identify","track","show","hide","isShown","isOnline", "page"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","2.3");
+       n.setAttribute('data-widget-id','c64731a4-cefd-4fcc-5344-b8666c39b0a4');
+       c.parentNode.insertBefore(n,c);
+    }();
+</script>
+
+
+
+		<!-- place project specific Javascript in this file -->
+
+		<script src="{% static 'js/project.js' %}"></script>
+		{% block javascript %}
+
+		{% endblock javascript %}
+
+
+
+	</body>
 </html>
- 

@@ -1,1 +1,486 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/textstyle.css' %}" />
+<link rel="stylesheet" href="{% static 'css/project.css' %}" />
+
+<style media="screen">
+canvas{
+  z-index: -1;
+  position: fixed;
+}
+@media screen and (max-width: 480px) {
+  #banner p {
+    font-size: 1em;
+  }
+}
+</style>
+
+<canvas id="canvas"></canvas>
+<section id="banner">
+  <div class="inner">
+    <header>
+
+      <svg viewBox="0 0 960 300">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="80%">INVENTO'18</text>
+        </symbol>
+
+        <g class = "g-ants">
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+      </svg>
+
+
+      <h3>Government Engineering College Sreekrishnapuram Palakkad</h3>
+      <h3>MARCH 16 17 18</h3>
+
+    </header>
+    <a href="https://images.inventogec.org/Invento'18Brochure.pdf"
+    class="button special {# js-scroll-trigger #}">
+    Download brochure</a><br>
+    <a href="{% url '3d' %}" class="button special icon fa-street-view" style="margin-top:1.5em">View college in 3d</a>
+  </div>
+
+</section>
+
+<!-- Main -->
+<div id="main">
+
+  <!-- One -->
+  <section class="wrapper style1">
+    <div class="inner">
+      <header class="align-center">
+        <h2>Main Events</h2>
+      </header>
+
+      <!-- 2 Column Video Section -->
+      <div class="flex flex-3">
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/bands.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            BAND WAR
+          </p>
+          <a href="/events/3" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/hiphop2.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            NATYA
+          </p>
+          <a href="/events/43" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/adventure.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            GEC ROADIES
+          </p>
+          <a href="/events/38" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two -->
+  <section class="wrapper style2">
+    <div class="inner">
+      <header>
+        <h2>Mark The Dates</h2>
+      </header>
+      <!-- Tabbed Video Section -->
+      <div class="flex flex-tabs">
+        <ul class="tab-list">
+          <li>
+            <a href="#" data-tab="tab-1" class="active">MARCH 16</a>
+          </li>
+          <li>
+            <a href="#" data-tab="tab-2">MARCH 17</a>
+          </li>
+          <li>
+            <a href="#" data-tab="tab-3">MARCH 18</a>
+          </li>
+        </ul>
+        <div class="tabs">
+
+          <!-- Tab 1 -->
+          <div class="tab tab-1 flex flex-3 active">
+
+            <!-- Video Thumbnail -->
+            <div class="video col">
+              <div class="image fit">
+                <img src="{% static 'images/vr.jpg' %}" alt="" />
+              </div>
+              <p class="caption">
+                VR EXPO
+              </p>
+              <a href="/events/22" class="link">
+                <span>Click Me</span>
+              </a>
+            </div>
+
+            <!-- Video Thumbnail -->
+            <div class="video col">
+              <div class="image fit">
+                <img src="{% static 'images/paper.jpg' %}" alt="" />
+              </div>
+              <p class="caption">
+                Paper Presentation
+              </p>
+              <a href="/events/65" class="link">
+                <span>Click Me</span>
+              </a>
+            </div>
+
+            <!-- Video Thumbnail -->
+            <div class="video col">
+              <div class="image fit">
+                <img src="{% static 'images/projectexpo.jpg' %}" alt="" />
+              </div>
+              <p class="caption">
+                Project expo
+              </p>
+              <a href="/events/66" class="link">
+                <span>Click Me</span>
+              </a>
+            </div>
+
+            <!-- Video Thumbnail -->
+            <div class="video col">
+              <div class="image fit">
+                <img src="{% static 'images/hackforsite.jpg' %}" alt="" />
+              </div>
+              <p class="caption">
+                SHE_HACKS
+              </p>
+              <a href="/events/55" class="link">
+                <span>Click Me</span>
+              </a>
+            </div>
+
+            <!-- Video Thumbnail -->
+            <div class="video col">
+              <div class="image fit">
+                <img src="{% static 'images/projectexpo.jpg' %}" alt="" />
+              </div>
+              <p class="caption">
+                Ultimate Engineer
+              </p>
+              <a href="/events/46" class="link">
+                <span>Click Me</span>
+              </a>
+            </div>
+
+            <!-- Video Thumbnail -->
+            <div class="video col">
+              <div class="image fit">
+                <img src="{% static 'images/holomaniacsforsite.jpg' %}" alt="" />
+              </div>
+              <p class="caption">
+                Holomaniacs
+              </p>
+              <a href="/events/52" class="link">
+                <span>Click Me</span>
+              </a>
+            </div>
+
+            <!-- Video Thumbnail -->
+            <div class="video col">
+              <div class="image fit">
+                <img src="{% static 'images/water-displayforsite.jpg' %}" alt="" />
+              </div>
+              <p class="caption">
+                Graphical Waterfall
+              </p>
+              <a href="/events/16" class="link">
+                <span>Click Me</span>
+              </a>
+            </div>
+
+
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="tab tab-2 flex flex-3">
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              GEC Roadies
+            </p>
+            <a href="/events/38" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Natya
+            </p>
+            <a href="/events/43" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Best Manager
+            </p>
+            {# TODO: add link #}
+            <a href="/events/" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Crusade
+            </p>
+            <a href="/events/6" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Drone parking
+            </p>
+            <a href="/events/24" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Inspectra
+            </p>
+            <a href="/events/48" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+
+
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="tab tab-3 flex flex-3">
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Battle of bands
+            </p>
+            <a href="/events/3" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Treasure hunt
+            </p>
+            {# TODO: link #}
+            <a href="/events/3" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Robo soccer
+            </p>
+            <a href="/events/27" class="link">
+              <span>Click Me</span>
+            </a>
+            </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Best IT Techie
+            </p>
+            <a href="/events/5" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Bicycle mudrace
+            </p>
+            <a href="/events/14" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+            <!-- Video Thumbnail -->
+          <div class="video col">
+            <div class="image fit">
+              <img src="{% static 'images/comingsoon.jpg' %}" alt="" />
+            </div>
+            <p class="caption">
+              Strokes
+            </p>
+            <a href="/events/29" class="link">
+              <span>Click Me</span>
+            </a>
+          </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three -->
+  <section class="wrapper ">
+    <div class="inner">
+      <header class="align-center">
+        <h2>Department Wise</h2>
+      </header>
+
+      <!-- 3 Column Video Section -->
+      <div class="flex flex-3">
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/pic09.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            General
+          </p>
+          <a href="/general" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/csforsite.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            CSE
+          </p>
+          <a href="/cse" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/ecforsite.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            EC
+          </p>
+          <a href="/ece" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="flex flex-3">
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/eeeforsite.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            EEE
+          </p>
+          <a href="/eee" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/itforsite.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            IT
+          </p>
+          <a href="/it" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+        <div class="video col">
+          <div class="image fit">
+            <img src="{% static 'images/mechforsite.jpg' %}" alt="" />
+          </div>
+          <p class="caption">
+            ME
+          </p>
+          <a href="/me" class="link">
+            <span>Click Me</span>
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+</div>
+
+<script src="{% static 'js/canvas.js' %}"></script>
+
+{% endblock %}
