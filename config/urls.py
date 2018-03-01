@@ -12,9 +12,6 @@ from invento18.events.views import EventDetailView, departmentview
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
-    url(r'^elements/$', TemplateView.as_view(template_name='pages/elements.html'), name='elements'),
-    url(r'^generic/$', TemplateView.as_view(template_name='pages/generic.html'), name='generic'),
-    url(r'^generic1/$', TemplateView.as_view(template_name='pages/generic1.html'), name='generic1'),
 
     url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
 
