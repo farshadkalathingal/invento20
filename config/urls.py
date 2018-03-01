@@ -9,18 +9,20 @@ from django.views import defaults as default_views
 from rest_framework import routers
 
 from invento18.events.views import EventDetailView, departmentview
-from invento18.events.serializers import EventViewSet
+from invento18.events.serializers import EventList
 
-router = routers.DefaultRouter()
-router.register(r'api/v1/events', EventViewSet)
+# router = routers.DefaultRouter()
+# router.register(r'api/v1/events/(?P<category>[\w]{1,3})/(?P<type>[\w]{1,3})', EventList)
 
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
-    url(r'^', include(router.urls)),
+    # url(r'^', include(router.urls)),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
 
     url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
+
+    url(r'api/v1/events/(?P<category>[\w]{1,3})/(?P<_type>[\w]{1,3})', EventList.as_view()),
 
     url(r'^general/$', departmentview, name='general'),
     url(r'^cse/$', departmentview, name='cse'),
