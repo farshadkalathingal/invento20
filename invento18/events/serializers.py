@@ -6,6 +6,7 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = ('title', 'description', 'category', '_type',
             'fee', 'prize', 'coordinators', 'day', 'imageurl',
+            'pk',
         )
 
 class EventList(generics.ListAPIView):
