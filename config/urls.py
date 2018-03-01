@@ -22,7 +22,7 @@ urlpatterns = [
 
     url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
 
-    url(r'api/v1/events/(?P<category>[\w]{1,3})/(?P<_type>[\w]{1,3})', EventList.as_view()),
+    url(r'api/v1/events/(?P<category>[\w]{1,3})/(?P<_type>[\w]{0,3})', EventList.as_view()),
 
     url(r'^general/$', departmentview, name='general'),
     url(r'^cse/$', departmentview, name='cse'),

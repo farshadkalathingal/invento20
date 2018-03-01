@@ -13,7 +13,9 @@ class EventList(generics.ListAPIView):
         def get_queryset(self):
             category = self.kwargs['category']
             _type = self.kwargs['_type']
-            print(category)
-            print(_type)
-            queryset = Event.objects.filter(category=category, _type=_type)
+            if category == 'gen':
+                queryset = Event.objects.filter(category=category)
+            else:
+                queryset = Event.objects.filter(category=category, _type=_type)
+
             return queryset
