@@ -1,7 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
 
+{% block title %}
+{{ event.title }} - Invento 18
+{% endblock %}
 
-
-{% extends "base.html" %} {% load static %} {% block content %}
+{% block content %}
 
 <!-- Main -->
 <div id="main">
@@ -60,6 +64,11 @@
 
                     <hr/>
                     <!-- Text stuff -->
+                    {% if event.prize %}
+                    <h2>Winner takes home</h2>
+                    {{event.prize}} ₹
+                    <hr/>
+                    {% endif %}
                     <h2>CONTACT</h2>
                     {{event.coordinators|linebreaks}}
                     <hr />
