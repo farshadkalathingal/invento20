@@ -1,19 +1,33 @@
 
-.image .fit .detail{
+a.button.special{
+  margin-bottom: 2em !important;
+}
+
+@media (max-width: 576px) {
+  .button.special{
+    margin-bottom: 10px;
+  }
+}
+
+.banner404{
+  background: url(https://s-media-cache-ak0.pinimg.com/originals/6a/83/54/6a8354ccbcdace47646578dfb35464b2.jpg);
+}
+
+.image.fit.detail{
   width: 75%;
   margin: 0 auto;
 }
 
-.video .caption {
+.video.caption {
   padding: 0.75em;
 }
 
-.inner{
+.inner.home{
     margin-top: -15em;
 }
 
 @media (max-width: 576px) {
-  .inner{
+  .inner .home{
       margin-top: -5em;
   }
 }
@@ -166,16 +180,9 @@ ul.tab-list li a:hover {
     }
   }
 
-
-
-
-
-
-
-
   @media screen and (max-width: 736px){
     #banner .button {
-      width: 50%;
+      width: 65%;
       margin-bottom: 100px;
     }
 

@@ -4,7 +4,13 @@
     align-items: center;
     background-color: black;
     flex-direction: column;
-    /*        margin: 150px 32% auto;*/
+    margin: 150px 32% auto;
+}
+
+@media (max-width: 576px){
+  .bg{
+    font-size: .5em;
+  }
 }
 
 .image {
