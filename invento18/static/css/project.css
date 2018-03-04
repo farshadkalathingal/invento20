@@ -3,6 +3,12 @@
   margin-bottom:10px !important;
 }
 
+@media (max-width: 576px) {
+  .amb{
+    width: 75% !important;
+  }
+}
+
 a.button.special{
   margin-bottom: 2em !important;
 }
