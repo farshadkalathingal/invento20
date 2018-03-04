@@ -12,8 +12,9 @@ function generator(){
   messenger_prefixUrl = "fb-messenger://share/?link=";
   url = baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "messenger" + "&utm_campaign=" + utmCampaign;
   document.getElementById("link").href=url;
+
   messenger_button = document.getElementById("messenger");
-  messenger_button.href = messenger_prefixUrl+encodeURIComponent(url)+ "&app_id=123456789";
+  messenger_button.href = messenger_prefixUrl+encodeURIComponent(url);
 
   var shareButton = document.getElementById('shareThis');
   var supported = document.getElementById('support');
@@ -38,6 +39,7 @@ function generator(){
       supported.innerHTML = "Unfortunately, this feature is not supported on your browser";
     }
   });
+
 }
 
 </script>
@@ -53,7 +55,8 @@ function generator(){
         Share on messenger
       </a>
 
-      <button id="shareThis">Share</button>
+      <button id="shareThis" class="button special">Share</button>
+      <a href="" id="whatsapp"><button class="button special">whatsapp</button></a>
       <p id="support"></p>
 
 
