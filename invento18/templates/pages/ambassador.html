@@ -32,7 +32,7 @@ function generator(){
   var shareButton = document.getElementById('shareThis');
   var supported = document.getElementById('support');
 
-  document.getElementById("genButton").className = "button special icon fa fa-check";
+  document.getElementById("genButton").className = "button special icon fa fa-check amb";
   // Listen for any clicks
   shareButton.addEventListener('click', function (ev) {
     // Check if the current browser supports the Web Share API
@@ -65,7 +65,7 @@ function copyToClipboard(){
   textArea.select();
   document.execCommand("copy");
   document.body.removeChild(textArea);
-  document.getElementById("copyButton").className = "button special icon fa fa-check";
+  document.getElementById("copyButton").className = "button special icon fa fa-check amb";
 }
 
 </script>
