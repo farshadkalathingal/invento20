@@ -7,20 +7,25 @@
 <script>
 
 var androidUrl;
+var baseUrl;
+var utmSource;
+var utmCampaign;
 
 function generator(){
-  var baseUrl = "https://inventogec.org?"
-  var utmSource = document.getElementById("code").value;
-  var utmCampaign = "amb";
+  baseUrl = "https://inventogec.org?"
+  utmSource = document.getElementById("code").value;
+  utmCampaign = "amb";
 
   androidUrl = baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "android" + "&utm_campaign=" + utmCampaign;
   var fbUrl = "https://www.facebook.com/sharer/sharer.php?u="+baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "fb" + "&utm_campaign=" + utmCampaign;
 
   var android = document.getElementById("android");
   var fb = document.getElementById("fb");
+  var copy = document.getElementById("copyButton");
 
   android.style.visibility = "visible";
   fb.style.visibility = "visible";
+  copy.style.visibility = "visible";
 
   fb.href = fbUrl;
 
@@ -49,6 +54,18 @@ function generator(){
   });
 }
 
+function copyToClipboard(){
+  var textArea = document.createElement("textarea");
+  textArea.value = baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "clipboard" + "&utm_campaign=" + utmCampaign;;
+
+  document.body.appendChild(textArea);
+
+  textArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textArea);
+  document.getElementById("copyButton").className = "button special icon fa fa-check";
+}
+
 </script>
 
 <section id="banner">
@@ -56,15 +73,18 @@ function generator(){
     <header>
       <h2>Ambassador link generator</h2>
       Enter your ambassador code : <input type="text" id="code"><br>
-      <input type="submit" onclick="generator()" value="Generate share link" class="button special">
+      <button type="submit" onclick="generator()" class="button special fa fa-plus amb"> Generate share link</button>
 
       <a href="" id="fb" style="visibility:hidden">
-        <button class="button special icon fa fa-facebook">Share on FB</button>
+        <button class="button special icon fa fa-facebook amb">Share on FB</button>
       </a>
 
-      <a href="" id="android" style="visibility:hidden" onclick="webshareapi()">
-        <button id="shareThis" class="button special icon fa fa-android">AndroidShare</button>
+      <a href="" id="android" style="visibility:hidden">
+        <button id="shareThis" class="button special icon fa fa-android amb"> Share</button>
       </a>
+
+        <button id="copyButton" class="button special icon fa fa-clipboard amb" onclick="copyToClipboard()"  style="visibility:hidden">Copy to clipboard</button>
+
 
       <p id="support"></p>
 
