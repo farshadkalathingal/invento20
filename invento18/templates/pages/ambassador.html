@@ -5,16 +5,24 @@
 {% block content %}
 
 <script>
-function generator(){
-  baseUrl = "https://inventogec.org?"
-  utmSource = document.getElementById("code").value;
-  utmCampaign = "amb";
-  messenger_prefixUrl = "fb-messenger://share/?link=";
-  url = baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "messenger" + "&utm_campaign=" + utmCampaign;
-  document.getElementById("link").href=url;
 
-  messenger_button = document.getElementById("messenger");
-  messenger_button.href = messenger_prefixUrl+encodeURIComponent(url);
+var androidUrl;
+
+function generator(){
+  var baseUrl = "https://inventogec.org?"
+  var utmSource = document.getElementById("code").value;
+  var utmCampaign = "amb";
+
+  androidUrl = baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "android" + "&utm_campaign=" + utmCampaign;
+  var fbUrl = "https://www.facebook.com/sharer/sharer.php?u="+baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "fb" + "&utm_campaign=" + utmCampaign;
+
+  var android = document.getElementById("android");
+  var fb = document.getElementById("fb");
+
+  android.style.visibility = "visible";
+  fb.style.visibility = "visible";
+
+  fb.href = fbUrl;
 
   var shareButton = document.getElementById('shareThis');
   var supported = document.getElementById('support');
@@ -26,11 +34,11 @@ function generator(){
 
       // Get the canonical URL from the link tag
       //var shareUrl = document.querySelector('link[rel=canonical]') ? document.querySelector('link[rel=canonical]').href : window.location.href;
-
+      console.log(androidUrl);
       // Share it!
       navigator.share({
         title: document.title,
-        url: url
+        url: androidUrl
       }).then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing:', error));
 
@@ -39,7 +47,6 @@ function generator(){
       supported.innerHTML = "Unfortunately, this feature is not supported on your browser";
     }
   });
-
 }
 
 </script>
@@ -50,13 +57,15 @@ function generator(){
       <h2>Ambassador link generator</h2>
       Enter your ambassador code : <input type="text" id="code"><br>
       <input type="submit" onclick="generator()" value="Generate share link" class="button special">
-      <a href="fb-messenger://share/?link= https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fsharing%2Freference%2Fsend-dialog&app_id=123456789" id="link">test</a>
-      <a href="" class="button special icon fa fa-facebook" id="messenger" hidden=True>
-        Share on messenger
+
+      <a href="" id="fb" style="visibility:hidden">
+        <button class="button special icon fa fa-facebook">Share on FB</button>
       </a>
 
-      <button id="shareThis" class="button special">Share</button>
-      <a href="" id="whatsapp"><button class="button special">whatsapp</button></a>
+      <a href="" id="android" style="visibility:hidden" onclick="webshareapi()">
+        <button id="shareThis" class="button special icon fa fa-android">AndroidShare</button>
+      </a>
+
       <p id="support"></p>
 
 
