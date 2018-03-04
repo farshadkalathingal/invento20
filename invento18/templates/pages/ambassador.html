@@ -32,6 +32,7 @@ function generator(){
   var shareButton = document.getElementById('shareThis');
   var supported = document.getElementById('support');
 
+  document.getElementById("genButton").className = "button special icon fa fa-check";
   // Listen for any clicks
   shareButton.addEventListener('click', function (ev) {
     // Check if the current browser supports the Web Share API
@@ -52,6 +53,7 @@ function generator(){
       supported.innerHTML = "Unfortunately, this feature is not supported on your browser";
     }
   });
+
 }
 
 function copyToClipboard(){
@@ -73,7 +75,7 @@ function copyToClipboard(){
     <header>
       <h2>Ambassador link generator</h2>
       Enter your ambassador code : <input type="text" id="code"><br>
-      <button type="submit" onclick="generator()" class="button special fa fa-plus amb"> Generate share link</button>
+      <button id="genButton" type="submit" onclick="generator()" class="button special fa fa-plus amb"> Generate share link</button>
 
       <a href="" id="fb" style="visibility:hidden">
         <button class="button special icon fa fa-facebook amb">Share on FB</button>
