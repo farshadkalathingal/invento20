@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %} Ambassador link generator {% endblock %}
+
+{% block content %}
+
+<script>
+function generator(){
+  baseUrl = "https://inventogec.org?"
+  utmSource = document.getElementById("code").value;
+  utmCampaign = "amb";
+  messenger_prefixUrl = "fb-messenger://share/?link=";
+  url = baseUrl+"utm_source="+utmSource+ "&utm_medium=" + "messenger" + "&utm_campaign=" + utmCampaign;
+  document.getElementById("link").href=url;
+  messenger_button = document.getElementById("messenger");
+  messenger_button.href = messenger_prefixUrl+encodeURIComponent(url)+ "&app_id=123456789";
+
+  var shareButton = document.getElementById('shareThis');
+  var supported = document.getElementById('support');
+
+  // Listen for any clicks
+  shareButton.addEventListener('click', function (ev) {
+    // Check if the current browser supports the Web Share API
+    if (navigator.share !== undefined) {
+
+      // Get the canonical URL from the link tag
+      //var shareUrl = document.querySelector('link[rel=canonical]') ? document.querySelector('link[rel=canonical]').href : window.location.href;
+
+      // Share it!
+      navigator.share({
+        title: document.title,
+        url: url
+      }).then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing:', error));
+
+      ev.preventDefault();
+    } else {
+      supported.innerHTML = "Unfortunately, this feature is not supported on your browser";
+    }
+  });
+}
+
+</script>
+
+<section id="banner">
+  <div class="inner">
+    <header>
+      <h2>Ambassador link generator</h2>
+      Enter your ambassador code : <input type="text" id="code"><br>
+      <input type="submit" onclick="generator()" value="Generate share link" class="button special">
+      <a href="fb-messenger://share/?link= https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fsharing%2Freference%2Fsend-dialog&app_id=123456789" id="link">test</a>
+      <a href="" class="button special icon fa fa-facebook" id="messenger" hidden=True>
+        Share on messenger
+      </a>
+
+      <button id="shareThis">Share</button>
+      <p id="support"></p>
+
+
+    </header>
+  </div>
+</section>
+
+{% endblock content %}

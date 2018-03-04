@@ -5,6 +5,12 @@
 {{ event.title }} - Invento 18
 {% endblock %}
 
+{% block meta %}
+<meta property="og:site_name" content="Invento 18" />
+<meta property="og:title" content={{event.title}}" Invento 18">
+<meta property="og:description" content="{{ event.title }} is a {{ event.get_category_display }} event of Invento 18. Be a part of the tech extravaganza of Invento 18.">
+{% endblock %}
+
 {% block content %}
 
 <!-- Main -->

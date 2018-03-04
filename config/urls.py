@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
 
     url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
+    url(r'share/$', TemplateView.as_view(template_name='pages/ambassador.html'), name='3d'),
 
     url(r'api/v1/events/(?P<category>[\w]{1,3})/(?P<_type>[\w]{0,3})', EventList.as_view()),
 
