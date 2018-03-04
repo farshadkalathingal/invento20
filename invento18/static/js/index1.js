@@ -7,7 +7,7 @@
 //     'code-cover-screen'
 // ].map((id) => document.getElementById(id));
 
-let getById = (id) => document.getElementById(id)
+let getById = (id) => document.getElementById(id);
 
 let _animated = [
     getById('computer'),
@@ -20,9 +20,9 @@ let btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
     _animated.forEach(function(el){
-        el.style.animation = 'none'; 
+        el.style.animation = 'none';
         setTimeout(() => {
             el.style.animation = '';
           }, 10);
-     });    
+     });
 });
