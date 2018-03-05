@@ -67,6 +67,15 @@
 
                     <hr />
 
+                    {% if event.pdfurl %}
+
+                    <h2>PDF</h2>
+
+                    <a href="{{event.pdfurl}}">Download pdf</a>
+
+                    <hr />
+                    {% endif %}
+
                 </div>
 
                 <div class="6u$ 12u$(medium)">
