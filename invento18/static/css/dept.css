@@ -284,8 +284,6 @@ z-index: 1;
 
 #departmentbanner {
   min-height: 0;
-  height: auto !important;
-  padding: 4em 2em;
 }
 
   #departmentbanner .inner {

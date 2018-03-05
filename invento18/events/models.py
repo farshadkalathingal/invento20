@@ -28,6 +28,8 @@ class Event(models.Model):
     imageurl = models.URLField(blank=True)
     posterurl = models.URLField(blank=True)
     townscript_code = models.CharField(max_length=50, blank=True)
+    pdfurl = models.URLField(blank=True)
+
 
 
     def __str__(self):
