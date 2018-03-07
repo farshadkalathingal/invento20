@@ -1,1 +1,315 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style media="screen">
+
+.image.fit.developer img{
+  width:45% ;
+  margin-left: 320px;
+}
+#header h1{
+  padding-top: 17px;
+}
+
+@media screen and (max-width: 736px){
+  #header h1{
+    padding-top: 3px;
+
+  }
+  .image.fit.developer img{
+    width:45% ;
+    margin: 0 auto;
+  }
+}
+
+
+
+.image.fit img{
+  border-radius: 50%;
+  width: 72%;
+  margin-left: 90px;
+
+
+}
+
+@media screen and (max-width: 480px){
+  .image.fit img{
+    border-radius: 50%;
+    width:75%;
+    margin-left: 18px;
+  }
+  ul.icons li{
+    font-size:0.5em;
+  }
+}
+@media screen and (max-width: 980px){
+  .image.fit img{
+    border-radius: 50%;
+    width:75%;
+    margin-left: 18px;
+  }
+}
+
+h3{
+  text-align: center;
+
+}
+
+</style>
+
+
+<div id="main">
+  <section class="wrapper style1">
+  <div class="inner">
+
+  <!-- Intro -->
+  <h2 class="align-center">Tech Team Coordinator</h2>
+  <div class="row ">
+
+    <section class="12u 12u  ">
+      <span class="image fit align-center developer"><img class="" src="{% static 'images/bis2.jpg' %}" alt=""></span>
+      <h3 class="align-center" >Biswas B</h3>
+      <div class="copyright">
+        <ul class="icons align-center">
+          <li><a href="https://twitter.com/bis_waz" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="https://github.com/biswaz" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="https://www.linkedin.com/in/biswaz/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+  </div>
+  <hr class="major">
+
+
+  <h2 class="">Frontend Developers</h2>
+    <div class="row">
+
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/site2.jpg' %}" alt=""></span>
+        <h3 class="align-center">Maneesh P</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/ManeeshP15" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/MANEESH-P" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/maneesh-puthenveedu/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/renjeesh2.jpg' %}" alt=""></span>
+        <h3 >Renjeesh N</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://twitter.com/Demon-15" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/renjeesh-n-747a8615a/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+
+    </div>
+    <hr class="major" />
+    <h2 class="">Backend Developers</h2>
+    <div class="row">
+
+      <section class="6u 6u  ">
+        <span class="image fit <align-center></align-center>"><img class="" src="{% static 'images/bis2.jpg' %}" alt=""></span>
+        <h3 class="" >Biswas B</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/bis_waz" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/biswaz" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/biswaz/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="6u 6u">
+        <span class="image fit "><img class="developers" src="{% static 'images/navi2.jpg' %}" alt=""></span>
+        <h3 >Naveen M V</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/naveencode" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/naveencode" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/naveencode/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+
+    </div>
+    <hr class="major" />
+    <h2 class="">App Development Team Coordinator</h2>
+    <div class="row">
+
+
+      <section class="6u 6u">
+        <span class="image fit "><img class="developers" src="{% static 'images/sebin.jpg' %}" alt=""></span>
+        <h3 >Sebin Vincent</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/VincentSebin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/sebin-vincent" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/sebin-vincent-aaa359153/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+
+    </div>
+    <hr class="major" />
+    <h2 class="">Wordpress Developers</h2>
+    <div class="row">
+
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/rejul2.jpg' %}" alt=""></span>
+        <h3 >Rejul S</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/rejul-s-b74222145/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/anand.jpg' %}" alt=""></span>
+        <h3 >Anand Baburajan</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/AnandBaburajan" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+    <hr class="major" />
+    </div>
+    <h2 class="">Chat Bot Developers</h2>
+    <div class="row">
+
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/nived.jpg' %}" alt=""></span>
+        <h3 >Nived A</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/NIVED619" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/nivkid" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/vishnu2.jpg' %}" alt=""></span>
+        <h3 >Vishnu Prasad</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/VishnuP87166201" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/nivkid" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+
+    </div>
+    <hr class="major" />
+    <h2 class="">Site editors</h2>
+    <div class="row">
+
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/nandu2.jpg' %}" alt=""></span>
+        <h3 >Nandakishor S</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/nvedi_" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/nvedi" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/nandakishor-s-014537133/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/devika2.jpg' %}" alt=""></span>
+        <h3 >Devika Pradeep</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/devika-pradeep-881b08140/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="row">
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/varsha2.jpg' %}" alt=""></span>
+        <h3 >Varsha Margrette</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/not_margarita" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/MargareV" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/varsha-margrette-054125155/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/renjith2.jpg' %}" alt=""></span>
+        <h3 >Ranjith R</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/ranjith_r_" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/ranjithakalur" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+    <div class="row">
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/rejul2.jpg' %}" alt=""></span>
+        <h3 >Rejul S</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/rejul-s-b74222145/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="6u 6u">
+        <span class="image fit"><img class="developers" src="{% static 'images/vishnu2.jpg' %}" alt=""></span>
+        <h3 >Vishnu Prasad</h3>
+        <div class="copyright">
+          <ul class="icons align-center">
+            <li><a href="https://twitter.com/VishnuP87166201" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/nivkid" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+
+
+
+
+
+  <hr class="major" />
+
+
+  </div>
+  </section>
+</div>
+
+{% endblock %}
