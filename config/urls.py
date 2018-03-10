@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
     url(r'share/$', TemplateView.as_view(template_name='pages/ambassador.html'), name='share'),
     url(r'sanjeevani/$', TemplateView.as_view(template_name='pages/sanjeevani.html'), name='sanjeevani'),
+    url(r'sponsors/$', TemplateView.as_view(template_name='pages/sponsors.html'), name='sponsors'),
 
     url(r'api/v1/events/(?P<category>[\w]{1,3})/(?P<_type>[\w]{0,3})', EventList.as_view()),
 
