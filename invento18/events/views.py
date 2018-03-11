@@ -33,10 +33,12 @@ def departmentview(request):
         workshops = Event.objects.filter(category=dept, _type='wor')
         competitions = Event.objects.filter(category=dept, _type='com')
         shows = Event.objects.filter(category=dept, _type='sho')
+        talks = Event.objects.filter(category=dept, _type='tal')
 
 
         return render(request, template_name, {
         'workshops' : workshops,
         'competitions' : competitions,
         'shows' : shows,
+        'talks' : talks,
         })

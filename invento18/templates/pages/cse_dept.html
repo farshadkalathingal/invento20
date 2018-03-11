@@ -77,6 +77,34 @@
   </section>
   {% endif %}
 
+  <!-- Talks -->
+  {% if talks %}
+  <section class="wrapper style1">
+    <div class="inner">
+      <header class="align-left">
+        <h2> TALKS </h2>
+      </header>
+
+      <div class="flex flex-3">
+
+        {% for talk in talks %}
+        <div class="video col">
+          <div class="image fit">
+            <img src="{{ talk.imageurl }}" alt="" />
+          </div>
+          <h1 class="caption">
+            {{ talk.title }}
+          </h1>
+          <a href="/events/{{ talk.pk }}" class="link"><span>Click Me</span></a>
+        </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+  </section>
+  {% endif %}
+
   <!-- Shows -->
   {% if shows %}
   <section class="wrapper style1">

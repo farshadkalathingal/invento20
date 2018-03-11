@@ -15,6 +15,7 @@ class Event(models.Model):
     ('wor', 'Workshops'),
     ('com', 'Competitions'),
     ('sho', 'Shows'),
+    ('tal', 'Talks'),
     ('oth', 'Other'),
     )
     title = models.CharField(max_length=50)
