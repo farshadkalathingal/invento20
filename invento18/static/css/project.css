@@ -37,7 +37,7 @@ a.button.special{
 }
 
 @media (max-width: 576px) {
-  .inner .home{
+  .inner.home{
       margin-top: -5em;
   }
 }
