@@ -23,6 +23,10 @@
                 {% if request.user.is_staff %}
                   <a href="{{ event.get_admin_url }}">Edit this event as editor</a>
                 {% endif %}
+                <a href="#" class="button special">
+                  Spot registration available!
+                </a>
+                </blockquote>
             </header>
             <span class="image fit detail">
               <img src="{% if event.posterurl %}

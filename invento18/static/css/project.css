@@ -39,6 +39,7 @@ a.button.special{
 @media (max-width: 576px) {
   .inner.home{
       margin-top: 4em;
+      padding-bottom: 6em;
   }
 }
 
