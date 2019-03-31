@@ -37,7 +37,7 @@ urlpatterns = [
     url(settings.ADMIN_URL, admin.site.urls),
 
     # User management
-    url(r'^users/', include('invento18.users.urls', namespace='users')),
+    url(r'^users/', include(('invento18.users.urls', 'users'), namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
