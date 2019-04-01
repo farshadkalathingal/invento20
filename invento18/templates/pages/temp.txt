@@ -497,21 +497,4 @@
 
 
 
-         <nav class="pages-nav">
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'home' %}">Home</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'general' %}">General Events</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'cse' %}">CSE Events</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'ece' %}">ECE Events</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'eee' %}">EEE Events</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'it' %}">IT Events</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'me' %}">ME Events</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'sanjeevani' %}">Sanjeevani</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url '3d' %}">View college in 3d</a></div>
-			<div class="pages-nav__item"><a class="link link--page" href="{% url 'about' %}">About ./tech_team</a></div>
-
-			<div class="pages-nav__item pages-nav__item--social">
-				<a class="link link--social link--faded" href="#"><i class="fa fa-twitter"></i><span class="text-hidden">Twitter</span></a>
-				<a class="link link--social link--faded" href="#"><i class="fa fa-instagram"></i><span class="text-hidden">Instagram</span></a>
-				<a class="link link--social link--faded" href="#"><i class="fa fa-facebook"></i><span class="text-hidden">Facebook</span></a>
-			</div>
-		</nav>
+        

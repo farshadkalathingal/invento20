@@ -1,13 +1,8 @@
 {% load static i18n %}
 <!DOCTYPE HTML>
-<!--
-	Broadcast by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
+<html lang="en" class="no-js">
+
 	<head>
-				<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113941402-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -36,54 +31,68 @@
 		<meta property="og:image" itemprop="image" content="{% static 'images/college.jpg' %}">
 		<meta property="og:image:type" content="image/jpeg">
 		<link itemprop="thumbnailUrl" href="{% static 'images/favicon_bg.ico' %}">
-
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'invento19/css/demo.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'invento19/css/component.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'invento19/css/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'invento19/css/bootstrap.min.css' %}" />
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="{% static 'invento19/js/modernizr-custom.js' %}"></script>
+		<script src="{% static 'invento19/js/jQuery.js' %}"></script>
+		<script src="{% static 'invento19/js/baffle.min.js' %}"></script>
 
 		 {% block css %}
-		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
-		<link href="{% static 'css/project.css' %}" rel="stylesheet">
+		 
 		 {% endblock %}
 
 	</head>
-	<body class="subpage">
+	<body>
 		 {% block deptbanner %}
 		 {% endblock deptbanner %}
 		 {% block other %}
 		 {% endblock other %}
 
-		<div>
-		<!-- Header -->
-			<header id="header">
+		 <nav class="pages-nav">
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'home' %}">Home</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'general' %}">General Events</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'cse' %}">CSE Events</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'ece' %}">ECE Events</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'eee' %}">EEE Events</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'it' %}">IT Events</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'me' %}">ME Events</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'sanjeevani' %}">Sanjeevani</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url '3d' %}">View college in 3d</a></div>
+			<div class="pages-nav__item"><a class="link link--page" href="{% url 'about' %}">About ./tech_team</a></div>
 
-				<a href='/'>
-				<img id="logo" align="left" width="250px" height="auto" src="{% static 'images/LOGO_white.png' %}" alt="">
-				</a>
-
-				<a href="#menu">Menu</a>
-
-			</header>
+			<div class="pages-nav__item pages-nav__item--social">
+				<a class="link link--social link--faded" href="#"><i class="fa fa-twitter"></i><span class="text-hidden">Twitter</span></a>
+				<a class="link link--social link--faded" href="#"><i class="fa fa-instagram"></i><span class="text-hidden">Instagram</span></a>
+				<a class="link link--social link--faded" href="#"><i class="fa fa-facebook"></i><span class="text-hidden">Facebook</span></a>
+			</div>
+		</nav>
 
 
 		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="{% url 'home' %}">Home</a></li>
-					<li><a href="{% url 'general' %}">General Events</a></li>
-					<li><a href="{% url 'cse' %}">CSE Events</a></li>
-					<li><a href="{% url 'ece' %}">ECE Events</a></li>
-					<li><a href="{% url 'eee' %}">EEE Events</a></li>
-					<li><a href="{% url 'it' %}">IT Events</a></li>
-					<li><a href="{% url 'me' %}">ME Events</a></li>
-					<li><a href="{% url 'sanjeevani' %}">Sanjeevani</a></li>
-					<li><a href="{% url '3d' %}">View college in 3d</a></li>
-					<li><a href="{% url 'about' %}">About ./tech_team</a></li>
-				</ul>
-			</nav>
+		<div class="pages-stack">
 
 		{% block content %}
 
 		{% endblock %}
 
+		<div class="page" id="page-docu"></div>
 
+
+		<div class="page" id="page-manuals"></div>
+
+		<!-- /navigation pages  -->
+
+
+	</div>
+
+		<!-- /navigation pages  -->
+
+
+	
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
@@ -132,13 +141,13 @@
 					</ul>
 				</div>
 			</footer>
-		</div>
+		
 
-		<script src="{% static 'js/jquery.min.js' %}"></script>
-		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-		<script src="{% static 'js/skel.min.js' %}"></script>
-		<script src="{% static 'js/util.js' %}"></script>
-		<script src="{% static 'js/main.js' %}"></script>
+		<button class="menu-button"><span>Menu</span></button>
+		<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+		<script src="{% static 'invento19/js/classie.js' %}"></script>
+		<script src="{% static 'invento19/js/main.js' %}"></script>
+		<script src="{% static 'invento19/js/canvas.js' %}"></script>
 
 
 		<script async src="{% static 'js/project.js' %}"></script>
