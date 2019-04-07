@@ -73,6 +73,7 @@ body {
   text-align: center;
   display: block;
   background: #15171c;
+  position: relative;
 }
 
 .header-bar .site-branding {
@@ -2069,4 +2070,11 @@ transition: 0.5s;
 
 .icon-box-3 .entry-header::before {
     content: "03.";
+}
+.departmentheader {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    display: block;
+    width:100%;
 }

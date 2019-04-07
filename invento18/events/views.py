@@ -42,3 +42,4 @@ def departmentview(request):
         'shows' : shows,
         'talks' : talks,
         })
+        

@@ -6,205 +6,316 @@
 {% block css %}
 
 
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
-<link href="{% static 'css/project.css' %}" rel="stylesheet">
+
 <link href="{% static 'css/dept.css' %}" rel="stylesheet">
 <link href="{% static 'css/gearstyle.css' %}" rel="stylesheet">
 
-<style>
-#departmentbanner{
-  background: -webkit-linear-gradient(left, #2F2727, #1a82f7 );
 
-}
-.caption{
-  background: -webkit-linear-gradient(left, #2F2727, #1a82f7);
-}
-</style>
 {% endblock %}
 
 {% block content %}
 <!-- One -->
 <div class="page" id="page-home">
-<section id="departmentbanner" >
-
-      <div class='clock'>
-      <div class='clock__mask'></div>
-      <div class='gears'>
-        <div class='gear--standard'>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-        </div>
-        <div class='gear--reverse'>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-          <div class='gear__peg'></div>
-        </div>
-        <div class='gear--large'>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-        </div>
-      </div>
-      <div class='gears'>
-        <div class='gear--large cornered'>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-        </div>
-        <div class='gear--large cornered'>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-          <div class='gear__peg--large'></div>
-        </div>
-      </div>
+    <div class='heading_part '>
+								<div class="departmentheader">
+                    <div class='clock'>
+                        <div class='clock__mask'></div>
+                        <div class='gears'>
+                          <div class='gear--standard'>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                          </div>
+                          <div class='gear--reverse'>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                            <div class='gear__peg'></div>
+                          </div>
+                          <div class='gear--large'>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                          </div>
+                        </div>
+                        <div class='gears'>
+                          <div class='gear--large cornered'>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                          </div>
+                          <div class='gear--large cornered'>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                            <div class='gear__peg--large'></div>
+                          </div>
+                        </div>
+                    </div>
+                    <h1>DEPT OF MECHANICAL ENGINEERING</h1>
+                </div>
     </div>
-    <div class="inner">
 
 
-  <header>
 
-    <h1>DEPT OF</h1>
-    <h1>MECHANICAL ENGINEERING</h1>
-
-  </header>
-  </div>
-
-
-</section>
 
 <!-- Main -->
-<div id="main">
+<div class="content-section">
+    <div class="container">
+            <div class="row">
+                    <div class="col-12">
+                        {% load app_tag %}
+                        <!-- workshops -->
+                            {% if workshops %}
+                            <div class="lineup-artists-headline">
+                                    <div class="entry-title">
+                                            <h2>WORKSHOPS</h2>
+                                    </div><!-- entry-title -->
+                                    
+                                    <div class="lineup-artists">
+                                        {% with True as left %} 
+                                        {% for workshop in workshops %}
+                                            {% if left %}
+                                            <div class="lineup-artists-wrap flex flex-wrap">
+                                                    <figure class="featured-image">
+                                                            <a href="/events/{{ workshop.pk }}"> <img src="{% static 'invento19/images/black-chick.jpg' %}" alt=""> </a>
+                                                    </figure><!-- featured-image -->
 
-  <!-- Workshops -->
-  {% if workshops %}
-  <section class="wrapper style1">
-    <div class="inner">
-      <header class="align-left">
-        <h2> WORKSHOPS </h2>
-      </header>
+                                                    <div class="lineup-artists-description">
+                                                            <div class="lineup-artists-description-container">
+                                                                    <div class="entry-title">
+                                                                            {{ workshop.title }}
+                                                                    </div><!-- entry-title -->
 
-      <div class="flex flex-3">
+                                                                    <div class="entry-content">
+                                                                            <p>{{ workshop.description }}</p>
+                                                                    </div><!-- entry-content -->
 
-        {% for workshop in workshops %}
-          <div class="video col">
-            <div class="image fit">
-              <img src="{{ workshop.imageurl }}" alt="" />
-            </div>
-            <h1 class="caption">
-              {{ workshop.title }}
-            </h1>
-            <a href="/events/{{ workshop.pk }}" class="link"><span>Click Me</span></a>
-          </div>
-      {% endfor %}
+                                                                    <div class="box-link">
+                                                                            <a href="/events/{{ workshop.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+                                                                    </div><!-- box-link -->
+                                                            </div><!-- lineup-artists-description-container -->
+                                                    </div><!-- lineup-artists-description -->
+                                            </div><!-- lineup-artists-wrap -->
+                                            {% update_variable False as left %}
+                                            {% else %}
+                                            <div class="lineup-artists-wrap flex flex-wrap">
+                                                <div class="lineup-artists-description">
+                                                        <figure class="featured-image d-md-none">
+                                                                <a href="/events/{{ workshop.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+                                                        </figure><!-- featured-image -->
 
-    </div>
+                                                        <div class="lineup-artists-description-container">
+                                                                <div class="entry-title">
+                                                                    {{ workshop.title }}
+                                                                </div><!-- entry-title -->
 
-    </div>
-  </section>
-  {% endif %}
+                                                                <div class="entry-content">
+                                                                    <p>{{ workshop.description }}</p>
+                                                                  </div><!-- entry-content -->
 
-<!-- Shows -->
-{% if shows %}
-  <section class="wrapper style1">
-    <div class="inner">
-      <header class="align-left">
-        <h2> SHOWS </h2>
-      </header>
+                                                                <div class="box-link">
+                                                                        <a href="/events/{{ workshop.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+                                                                </div><!-- box-link -->
+                                                        </div><!-- lineup-artists-description-container -->
+                                                </div><!-- lineup-artists-description -->
 
-      <div class="flex flex-3">
+                                                <figure class="featured-image d-none d-md-block">
+                                                        <a href="/events/{{ workshop.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+                                                </figure><!-- featured-image -->
+                                        </div><!-- lineup-artists-wrap -->
+                                            {% update_variable True as left %}
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endwith %}
 
-        {% for show in shows %}
-          <div class="video col">
-            <div class="image fit">
-              <img src="{{ show.imageurl }}" alt="" />
-            </div>
-            <h1 class="caption">
-              {{ show.title }}
-            </h1>
-            <a href="/events/{{ show.pk }}" class="link"><span>Click Me</span></a>
-          </div>
-      {% endfor %}
-
-    </div>
-
-    </div>
-  </section>
-  {% endif %}
-
-<!-- Competitions -->
-{% if competitions %}
-  <section class="wrapper style1">
-    <div class="inner">
-      <header class="align-left">
-        <h2> COMPETITIONS </h2>
-      </header>
-
-      <div class="flex flex-3">
-
-        {% for competition in competitions %}
-          <div class="video col">
-            <div class="image fit">
-              <img src="{{ competition.imageurl }}" alt="" />
-            </div>
-            <h1 class="caption">
-              {{ competition.title }}
-            </h1>
-            <a href="/events/{{ competition.pk }}" class="link"><span>Click Me</span></a>
-          </div>
-      {% endfor %}
-
-    </div>
-
-    </div>
-  </section>
-  {% endif %}
+                                    </div><!-- lineup-artists -->
+                            </div>
+                            {% endif %}
 
 
 
+                            <!-- shows -->
+                            {% if shows %}
+                            <div class="lineup-artists-headline">
+                                    <div class="entry-title">
+                                            <h2>SHOWS</h2>
+                                    </div><!-- entry-title -->
+                                    
+                                    <div class="lineup-artists">
+                                        {% with True as left %} 
+                                        {% for show in shows %}
+                                            {% if left %}
+                                            <div class="lineup-artists-wrap flex flex-wrap">
+                                                    <figure class="featured-image">
+                                                            <a href="/events/{{ show.pk }}"> <img src="{% static 'invento19/images/black-chick.jpg' %}" alt=""> </a>
+                                                    </figure><!-- featured-image -->
+
+                                                    <div class="lineup-artists-description">
+                                                            <div class="lineup-artists-description-container">
+                                                                    <div class="entry-title">
+                                                                            {{ show.title }}
+                                                                    </div><!-- entry-title -->
+
+                                                                    <div class="entry-content">
+                                                                            <p>{{ show.description }}</p>
+                                                                    </div><!-- entry-content -->
+
+                                                                    <div class="box-link">
+                                                                            <a href="/events/{{ show.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+                                                                    </div><!-- box-link -->
+                                                            </div><!-- lineup-artists-description-container -->
+                                                    </div><!-- lineup-artists-description -->
+                                            </div><!-- lineup-artists-wrap -->
+                                            {% update_variable False as left %}
+                                            {% else %}
+                                            <div class="lineup-artists-wrap flex flex-wrap">
+                                                <div class="lineup-artists-description">
+                                                        <figure class="featured-image d-md-none">
+                                                                <a href="/events/{{ show.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+                                                        </figure><!-- featured-image -->
+
+                                                        <div class="lineup-artists-description-container">
+                                                                <div class="entry-title">
+                                                                    {{ show.title }}
+                                                                </div><!-- entry-title -->
+
+                                                                <div class="entry-content">
+                                                                    <p>{{ show.description }}</p>
+                                                                  </div><!-- entry-content -->
+
+                                                                <div class="box-link">
+                                                                        <a href="/events/{{ show.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+                                                                </div><!-- box-link -->
+                                                        </div><!-- lineup-artists-description-container -->
+                                                </div><!-- lineup-artists-description -->
+
+                                                <figure class="featured-image d-none d-md-block">
+                                                        <a href="/events/{{ show.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+                                                </figure><!-- featured-image -->
+                                        </div><!-- lineup-artists-wrap -->
+                                            {% update_variable True as left %}
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endwith %}
+
+                                    </div><!-- lineup-artists -->
+                            </div>
+                            {% endif %}
+                            {% if competitions %}
+                            <div class="lineup-artists-headline">
+                                    <div class="entry-title">
+                                            <h2>COMPETITIONS</h2>
+                                    </div><!-- entry-title -->
+                                    
+                                    <div class="lineup-artists">
+                                        {% with True as left %} 
+                                        {% for competition in competitions %}
+                                            {% if left %}
+                                            <div class="lineup-artists-wrap flex flex-wrap">
+                                                    <figure class="featured-image">
+                                                            <a href="/events/{{ competition.pk }}"> <img src="{% static 'invento19/images/black-chick.jpg' %}" alt=""> </a>
+                                                    </figure><!-- featured-image -->
+
+                                                    <div class="lineup-artists-description">
+                                                            <div class="lineup-artists-description-container">
+                                                                    <div class="entry-title">
+                                                                            {{ competition.title }}
+                                                                    </div><!-- entry-title -->
+
+                                                                    <div class="entry-content">
+                                                                            <p>{{ competition.description }}</p>
+                                                                    </div><!-- entry-content -->
+
+                                                                    <div class="box-link">
+                                                                            <a href="/events/{{ competition.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+                                                                    </div><!-- box-link -->
+                                                            </div><!-- lineup-artists-description-container -->
+                                                    </div><!-- lineup-artists-description -->
+                                            </div><!-- lineup-artists-wrap -->
+                                            {% update_variable False as left %}
+                                            {% else %}
+                                            <div class="lineup-artists-wrap flex flex-wrap">
+                                                <div class="lineup-artists-description">
+                                                        <figure class="featured-image d-md-none">
+                                                                <a href="/events/{{ competition.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+                                                        </figure><!-- featured-image -->
+
+                                                        <div class="lineup-artists-description-container">
+                                                                <div class="entry-title">
+                                                                    {{ competition.title }}
+                                                                </div><!-- entry-title -->
+
+                                                                <div class="entry-content">
+                                                                    <p>{{ competition.description }}</p>
+                                                                  </div><!-- entry-content -->
+
+                                                                <div class="box-link">
+                                                                        <a href="/events/{{ competition.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+                                                                </div><!-- box-link -->
+                                                        </div><!-- lineup-artists-description-container -->
+                                                </div><!-- lineup-artists-description -->
+
+                                                <figure class="featured-image d-none d-md-block">
+                                                        <a href="/events/{{ competition.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+                                                </figure><!-- featured-image -->
+                                        </div><!-- lineup-artists-wrap -->
+                                            {% update_variable True as left %}
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endwith %}
+
+                                    </div><!-- lineup-artists -->
+                            </div>
+                            {% endif %}
+                            <!-- lineup-artists-headline -->
+                    </div><!-- col-12 -->
+            </div><!-- row -->
+    </div><!-- container -->
 </div>
+
+
+
 </div>
 
 {% endblock %}

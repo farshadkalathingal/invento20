@@ -1,73 +1,137 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} General Events
+{% block title %} General Events - Invento 18
 {% endblock title %}
 
 {% block css %}
 
 
-<link rel="stylesheet" href="{% static 'css/main.css' %}" />
-<link href="{% static 'css/project.css' %}" rel="stylesheet">
-<link href="{% static 'css/style.css' %}" rel="stylesheet">
-<link href="{% static 'css/dept.css' %}" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	
 
-<style>
-#departmentbanner{
-  background: -webkit-linear-gradient(left, #2F2727, red );
-}
-.caption{
-  background-color:#3c98d5;
-}
-</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'css/dept.css' %}" rel="stylesheet"><link href="{% static 'css/project.css' %}" rel="stylesheet">
+
+	
+
 
 {% endblock %}
 
 {% block content %}
 <div class="page" id="page-home">
-<!-- One -->
-<section id="departmentbanner" >
-
-  <div class="inner">
-    <header>
-      <h1>GENERAL EVENTS</h1>
-    </header>
-  </div>
-</section>
 
 
-<!-- Main -->
-<div id="main">
-
-  <section class="wrapper style1">
-    <div class="inner">
-      <!-- <header class="align-left">
-        <h2>  </h2> -->
-      </header>
-
-      <div class="flex flex-3">
-
-        {% for event in events %}
-        <div class="video col">
-          <div class="image fit">
-            <img src="{{ event.imageurl }}" alt="" />
-          </div>
-          <h1 class="caption">
-            {{ event.title }}
-          </h1>
-          <a href="/events/{{ event.pk }}" class="link"><span>Click Me</span></a>
-        </div>
-        {% endfor %}
-
-      </div>
-
-    </div>
-  </section>
+		<div class='heading_part '>
+                
+								<div class="departmentheader">
+								
+									<h1 >GENERAL EVENTS</h1>
+								</div>
+					<!-- </section> -->
+			</div>
+			<!-- One -->
+			
 
 
-</div>
+			<!-- Main -->
+			<div class="content-section">
+					<div class="container">
+									<div class="row">
+													<div class="col-12">
+															{% load app_tag %}
+															<!-- workshops -->
+																	{% if events %}
+																	<div class="lineup-artists-headline">
+																					<div class="entry-title">
+																									<h2>EVENTS</h2>
+																					</div><!-- entry-title -->
+																					
+																					<div class="lineup-artists">
+																							{% with True as left %} 
+																							{% for workshop in events %}
+																									{% if left %}
+																									<div class="lineup-artists-wrap flex flex-wrap">
+																													<figure class="featured-image">
+																																	<a href="/events/{{ workshop.pk }}"> <img src="{% static 'invento19/images/black-chick.jpg' %}" alt=""> </a>
+																													</figure><!-- featured-image -->
+	
+																													<div class="lineup-artists-description">
+																																	<div class="lineup-artists-description-container">
+																																					<div class="entry-title">
+																																									{{ workshop.title }}
+																																					</div><!-- entry-title -->
+	
+																																					<div class="entry-content">
+																																									<p>{{ workshop.description }}</p>
+																																					</div><!-- entry-content -->
+	
+																																					<div class="box-link">
+																																									<a href="/events/{{ workshop.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+																																					</div><!-- box-link -->
+																																	</div><!-- lineup-artists-description-container -->
+																													</div><!-- lineup-artists-description -->
+																									</div><!-- lineup-artists-wrap -->
+																									{% update_variable False as left %}
+																									{% else %}
+																									<div class="lineup-artists-wrap flex flex-wrap">
+																											<div class="lineup-artists-description">
+																															<figure class="featured-image d-md-none">
+																																			<a href="/events/{{ workshop.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+																															</figure><!-- featured-image -->
+
+																															<div class="lineup-artists-description-container">
+																																			<div class="entry-title">
+																																					{{ workshop.title }}
+																																			</div><!-- entry-title -->
+
+																																			<div class="entry-content">
+																																					<p>{{ workshop.description }}</p>
+																																				</div><!-- entry-content -->
+
+																																			<div class="box-link">
+																																							<a href="/events/{{ workshop.pk }}"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
+																																			</div><!-- box-link -->
+																															</div><!-- lineup-artists-description-container -->
+																											</div><!-- lineup-artists-description -->
+
+																											<figure class="featured-image d-none d-md-block">
+																															<a href="/events/{{ workshop.pk }}"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
+																											</figure><!-- featured-image -->
+																							</div><!-- lineup-artists-wrap -->
+																									{% update_variable True as left %}
+																									{% endif %}
+																									{% endfor %}
+																									{% endwith %}
+
+																					</div><!-- lineup-artists -->
+																	</div>
+																	{% endif %}
+
+
+
+												
+																	<!-- lineup-artists-headline -->
+													</div><!-- col-12 -->
+									</div><!-- row -->
+					</div><!-- container -->
+			</div>
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			
 </div>
 {% endblock %}
 
-</body>
-</html>
