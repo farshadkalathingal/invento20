@@ -1,330 +1,164 @@
-{% extends "base.html" %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="harrnish - ig@harrnish">
+      <link rel="icon" href="yourIconUrl" type="image/gif" sizes="16x16">
+      <title>About us</title>
 
-{% block title %}
-About ./tech_team
-{% endblock %}
+      <!-- bootstrapcdn -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-{% block content %}
-<style media="screen">
+      <!-- external stylesheet -->
+      <link rel="stylesheet" href="{% static 'invento19/css/style.css' %}">
 
-.image.fit.developer img{
-  width:45% ;
-  margin-left: 320px;
-}
-#header h1{
-  padding-top: 17px;
-}
+      <!-- icon pack -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-@media screen and (max-width: 736px){
-  #header h1{
-    padding-top: 3px;
+      <!-- google font -->
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Overpass:100,300,400,700,800&display=swap" rel="stylesheet"> 
+      <!-- jquery cdn -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-  }
-  .image.fit.developer img{
-    width:45% ;
-    margin: 0 auto;
-  }
-}
+      <!-- tweenmax (greensock) cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="{% static 'invento19/css/animate.css' %}">
+      <script src="{% static 'invento19/js/wow.min.js' %}"></script>
+</head>
+<body>
+      <div class="about-container">
 
+            <!-- NAVIGATION STARTS -->
 
-.image.fit img{
-  border-radius: 50%;
-  width: 72%;
-  margin-left: 90px;
-
-
-}
-
-@media screen and (max-width: 480px){
-  .image.fit img{
-    border-radius: 50%;
-    width:75%;
-    margin-left: 18px;
-  }
-  ul.icons li{
-    font-size:0.5em;
-  }
-}
-@media screen and (max-width: 980px){
-  .image.fit img{
-    border-radius: 50%;
-    width:75%;
-    margin-left: 18px;
-  }
-}
-
-h3{
-  text-align: center;
-
-}
-
-</style>
-
-<div class="page" id="page-home">
-<div id="main">
-  <section class="wrapper style1">
-  <div class="inner">
-
-  <!-- Intro -->
-  <h2 class="align-center">Tech Team Coordinator</h2>
-  <div class="row ">
-
-    <section class="12u 12u  ">
-      <span class="image fit align-center developer"><img class="" src="{% static 'images/bis2.jpg' %}" alt=""></span>
-      <h3 class="align-center" >Biswas B</h3>
-      <div class="copyright">
-        <ul class="icons align-center">
-          <li><a href="https://twitter.com/bis_waz" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="https://github.com/biswaz" class="icon fa-github"><span class="label">Github</span></a></li>
-          <li><a href="https://www.linkedin.com/in/biswaz/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-        </ul>
-      </div>
-    </section>
-
-
-
-
-  </div>
-  <hr class="major">
-
-
-  <h2 class="">Frontend Developers</h2>
-    <div class="row">
-
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/site2.jpg' %}" alt=""></span>
-        <h3 class="align-center">Maneesh P</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/ManeeshP15" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/MANEESH-P" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/maneesh-puthenveedu/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
+            <div class="nav">
+              <div class="menu-open">
+                    <ion-icon name="menu"></ion-icon>
+              </div>
+              <div class="brand">
+                    <span><a href="index.html"><b>INVENTO</b></a></span>
+              </div>
+              <div class="menu">
+                    <div class="menu-close">
+                          <ion-icon name="close"></ion-icon>
+                    </div>
+                    <ul>
+                          <li><a href="{% url 'home' %}">Home</a></li>
+                          <li><a href="{% url 'general' %}">General Events</a></li>
+                          <li><a href="{% url 'cse' %}">CSE Events</a></li>
+                          <li><a href="{% url 'ece' %}">ECE Events</a></li>
+                          <li><a href="{% url 'eee' %}">EEE Events</a></li>
+                          <li><a href="{% url 'it' %}">IT Events</a></li>
+                          <li><a href="{% url 'me' %}">ME Events</a></li>
+                          <li><a href="{% url 'about' %}">About Us</a></li>
+                    </ul>
+              </div>
         </div>
-      </section>
 
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/renjeesh2.jpg' %}" alt=""></span>
-        <h3 >Renjeesh N</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://twitter.com/Demon-15" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/renjeesh-n-747a8615a/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
+            <!-- NAVIGATION ENDS -->
 
+            <!-- DATA SECTION STARTS -->
 
-    </div>
-    <hr class="major" />
-    <h2 class="">Backend Developers (Django)</h2>
-    <div class="row">
+            <div class="about-hero">
+                  <div class="container-fluid hero wow fadeInUp">
+                        <h1 id="hero-title">Our story</h1>
+                  </div>
 
-      <section class="6u 6u">
-        <span class="image fit <align-center></align-center>"><img class="" src="{% static 'images/bis2.jpg' %}" alt=""></span>
-        <h3 class="" >Biswas B</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/bis_waz" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/biswaz" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/biswaz/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
+                  <div class="container content">
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure natus possimus, maiores officiis quibusdam suscipit rerum velit explicabo veritatis excepturi vel ab doloribus aliquid rem labore incidunt, odio quas. Excepturi voluptatem, autem rem odio blanditiis, sint cupiditate? Fugiat facere cum quidem dignissimos ipsum rem quibusdam nobis quia non provident, optio.</p>
 
+                        <p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure natus possimus, maiores officiis quibusdam suscipit rerum velit explicabo veritatis excepturi vel ab doloribus aliquid rem labore incidunt, odio quas. Excepturi voluptatem, autem rem odio blanditiis, sint cupiditate? Fugiat facere cum quidem dignissimos ipsum rem quibusdam nobis quia non provident, optio.</p>
 
-      <section class="6u 6u">
-        <span class="image fit "><img class="developers" src="{% static 'images/navi2.jpg' %}" alt=""></span>
-        <h3 >Naveen M V</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/naveencode" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/naveencode" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/naveencode/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
+                        <p id="blockquote" class="wow fadeInUp" data-wow-delay="0.7s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias labore enim dolor hic iusto.</p>
 
+                        <p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure natus possimus, maiores officiis quibusdam suscipit rerum velit explicabo veritatis excepturi vel ab doloribus aliquid rem labore incidunt, odio quas. Excepturi voluptatem, autem rem odio blanditiis, sint cupiditate? Fugiat facere cum quidem dignissimos ipsum rem quibusdam nobis quia non provident, optio.</p>
+                  </div>
+            </div>
 
-    </div>
-    <hr class="major" />
-    <h2 class="">App Development Team Coordinator</h2>
-    <div class="row">
+            <!-- DATA SECTION ENDS -->
 
+            <!-- FOOTER STARTS -->
 
-      <section class="6u 6u">
-        <span class="image fit "><img class="developers" src="{% static 'images/sebin.jpg' %}" alt=""></span>
-        <h3 >Sebin Vincent</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/VincentSebin" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/sebin-vincent" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/sebin-vincent-aaa359153/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-
-
-    </div>
-    <hr class="major" />
-    <h2 class="">Wordpress Developers</h2>
-    <div class="row">
-
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/rejul2.jpg' %}" alt=""></span>
-        <h3 >Rejul S</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/rejul-s-b74222145/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/anand.jpg' %}" alt=""></span>
-        <h3 >Anand Baburajan</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/AnandBaburajan" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/anaswara.jpg' %}" alt=""></span>
-        <h3>Anaswara</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-
-    <hr class="major" />
-    </div>
-    <h2 class="">Chat Bot Developers</h2>
-    <div class="row">
-
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/nived.jpg' %}" alt=""></span>
-        <h3 >Nived A</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/NIVED619" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/nivkid" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/vishnu2.jpg' %}" alt=""></span>
-        <h3 >Vishnu Prasad</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/VishnuP87166201" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/nivkid" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
+            <div class="container-fluid footer">
+                  <div class="section container">
+                        <footer>
+                              <div class="row">
+                                    <div class="col-lg-3 block">
+                                          <p>Wordoutlet, 3581 Lunneta Street,
+                                          <br>
+                                          Siesta Key, Florida. 20002,
+                                          <br>
+                                          USA</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <p>FAQs
+                                          <br>
+                                          Return Policy
+                                          <br>
+                                          Shipping</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <p>Careers
+                                          <br>
+                                          Community
+                                          <br>
+                                          Wholesale</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <div class="media">
+                                                <ul>
+                                                      <li><ion-icon name="logo-facebook"></ion-icon></li>
+                                                      <li><ion-icon name="logo-instagram"></ion-icon></li>
+                                                      <li><ion-icon name="logo-twitter"></ion-icon></li>
+                                                      <li><ion-icon name="logo-pinterest"></ion-icon></li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                              </div>
+                        </footer>
+                  </div>
+            </div>
 
 
-    </div>
-    <hr class="major" />
-    <h2 class="">Site content editors</h2>
-    <div class="row">
+            <!-- FOOTER ENDS -->
+            </div>
 
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/nandu2.jpg' %}" alt=""></span>
-        <h3 >Nandakishor S</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/nvedi_" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/nvedi" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/nandakishor-s-014537133/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/devika2.jpg' %}" alt=""></span>
-        <h3 >Devika Pradeep</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/devika-pradeep-881b08140/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-    </div>
-    <div class="row">
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/varsha2.jpg' %}" alt=""></span>
-        <h3 >Varsha Margrette</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/not_margarita" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/MargareV" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/varsha-margrette-054125155/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/renjith2.jpg' %}" alt=""></span>
-        <h3 >Ranjith R</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/ranjith_r_" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/ranjithakalur" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
+            <script type="text/javascript">
 
-    </div>
-    <div class="row">
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/rejul2.jpg' %}" alt=""></span>
-        <h3 >Rejul S</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/in/rejul-s-b74222145/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="6u 6u">
-        <span class="image fit"><img class="developers" src="{% static 'images/vishnu2.jpg' %}" alt=""></span>
-        <h3 >Vishnu Prasad</h3>
-        <div class="copyright">
-          <ul class="icons align-center">
-            <li><a href="https://twitter.com/VishnuP87166201" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/nivkid" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
-        </div>
-      </section>
+            //Scroll reveal animations
 
-    </div>
+            new WOW().init();
 
+            //Scroll activated background change
+            $(function() {
+                  $(document).scroll(function() {
+                        var $nav = $(".nav");
+                        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                  });
+            });
 
+            //Toggle MENU
 
+            var t1 = new TimelineMax({paused: true});
+            t1.to(".menu", 0.5, {
+                  left: "0%",
+                  ease: Power2.easeInOut
+            });
 
+            t1.reverse();
+            $(document).on("click", ".menu-open", function() {
+                  t1.reversed(!t1.reversed());
+            });
+            $(document).on("click", ".menu-close", function() {
+                  t1.reversed(!t1.reversed());
+            });
 
-
-  <hr class="major" />
-
-
-  </div>
-  </section>
-</div></div>
-
-{% endblock %}
+            </script>
+</body>
+</html>

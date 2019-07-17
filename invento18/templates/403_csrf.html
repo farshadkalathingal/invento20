@@ -1,9 +1,116 @@
-{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="harrnish - ig@harrnish">
+      <link rel="icon" href="yourIconUrl" type="image/gif" sizes="16x16">
+      <title>403 - Error</title>
 
-{% block title %}Forbidden (403){% endblock %}
+      <!-- bootstrapcdn -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-{% block content %}
-<h1>Forbidden (403)</h1>
+      <!-- external stylesheet -->
+      <link rel="stylesheet" href="{% static 'invento19/css/style.css' %}">
 
-<p>CSRF verification failed. Request aborted.</p>
-{% endblock content %}
+      <!-- icon pack -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+      <!-- google font -->
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Overpass:100,300,400,700,800&display=swap" rel="stylesheet"> 
+      <!-- jquery cdn -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+      <!-- tweenmax (greensock) cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="{% static 'invento19/css/animate.css' %}">
+      <script src="{% static 'invento19/js/wow.min.js' %}"></script>
+</head>
+<body>
+      <div class="about-container">
+
+            <!-- NAVIGATION STARTS -->
+
+            <div class="nav">
+              <div class="menu-open">
+                    <ion-icon name="menu"></ion-icon>
+              </div>
+              <div class="brand">
+                    <span><a href="index.html"><b>INVENTO</b></a></span>
+              </div>
+              <div class="menu">
+                    <div class="menu-close">
+                          <ion-icon name="close"></ion-icon>
+                    </div>
+                    <ul>
+                          <li><a href="{% url 'home' %}">Home</a></li>
+                          <li><a href="{% url 'general' %}">General Events</a></li>
+                          <li><a href="{% url 'cse' %}">CSE Events</a></li>
+                          <li><a href="{% url 'ece' %}">ECE Events</a></li>
+                          <li><a href="{% url 'eee' %}">EEE Events</a></li>
+                          <li><a href="{% url 'it' %}">IT Events</a></li>
+                          <li><a href="{% url 'me' %}">ME Events</a></li>
+                          <li><a href="{% url 'about' %}">About Us</a></li>
+                    </ul>
+              </div>
+        </div>
+
+            <!-- NAVIGATION ENDS -->
+
+            <!-- DATA SECTION STARTS -->
+
+            <div class="about-hero">
+                  <div class="container-fluid hero wow fadeInUp" style="height: 100vh;">
+                        <h1 id="hero-title">403 - Error</h1>
+                  </div>
+            </div>
+
+            <!-- DATA SECTION ENDS -->
+
+            <!-- FOOTER STARTS -->
+
+
+
+
+            <!-- FOOTER ENDS -->
+            </div>
+
+            <script type="text/javascript">
+
+            //Scroll reveal animations
+
+            new WOW().init();
+
+            //Scroll activated background change
+            $(function() {
+                  $(document).scroll(function() {
+                        var $nav = $(".nav");
+                        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                  });
+            });
+
+            //Toggle MENU
+
+            var t1 = new TimelineMax({paused: true});
+            t1.to(".menu", 0.5, {
+                  left: "0%",
+                  ease: Power2.easeInOut
+            });
+
+            t1.reverse();
+            $(document).on("click", ".menu-open", function() {
+                  t1.reversed(!t1.reversed());
+            });
+            $(document).on("click", ".menu-close", function() {
+                  t1.reversed(!t1.reversed());
+            });
+
+            </script>
+</body>
+</html>

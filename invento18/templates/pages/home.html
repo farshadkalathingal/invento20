@@ -1,201 +1,270 @@
-{% extends "base.html" %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="harrnish - ig@harrnish">
+      <link rel="icon" href="yourIconUrl" type="image/gif" sizes="16x16">
+      <title>Invento</title>
 
-{% block content %}
+      <!-- bootstrapcdn -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<div class="page" id="page-home">
-        <!-- header -->
-        <div class='heading_part main_heading'>
-                
+      <!-- external stylesheet -->
+      <link rel="stylesheet" href="{% static 'invento19/css/style.css' %}">
 
-  </div>
-        <!-- /header -->
-        <div class="content-section">
-                <div class="container">
-                                <div class="row">
-                                                <div class="col-12">
-                                                                <div class="lineup-artists-headline">
-                                                                                <div class="entry-title">
-                                                                                                <h2>Highlight Events</h2>
-                                                                                </div><!-- entry-title -->
+      <!-- icon pack -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-                                                                                <div class="lineup-artists">
-                                                                                                <div class="lineup-artists-wrap flex flex-wrap">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/black-chick.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+      <!-- google font -->
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Overpass:100,300,400,700,800&display=swap" rel="stylesheet"> 
+      <!-- jquery cdn -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-                                                                                                                <div class="lineup-artists-description">
-                                                                                                                                <div class="lineup-artists-description-container">
-                                                                                                                                                <div class="entry-title">
-                                                                                                                                                                Natya
-                                                                                                                                                </div><!-- entry-title -->
+      <!-- tweenmax (greensock) cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
-                                                                                                                                                <div class="entry-content">
-                                                                                                                                                                <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. </p>
-                                                                                                                                                </div><!-- entry-content -->
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="{% static 'invento19/css/animate.css' %}">
+      <script src="{% static 'invento19/js/wow.min.js' %}"></script>
+</head>
+<body>
+      <div class="my-container">
 
-                                                                                                                                                <div class="box-link">
-                                                                                                                                                                <a href=""><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
-                                                                                                                                                </div><!-- box-link -->
-                                                                                                                                </div><!-- lineup-artists-description-container -->
-                                                                                                                </div><!-- lineup-artists-description -->
-                                                                                                </div><!-- lineup-artists-wrap -->
+            <!-- NAVIGATION STARTS -->
 
-                                                                                                <div class="lineup-artists-wrap flex flex-wrap">
-                                                                                                                <div class="lineup-artists-description">
-                                                                                                                                <figure class="featured-image d-md-none">
-                                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
-                                                                                                                                </figure><!-- featured-image -->
+            <div class="nav">
+                  <div class="menu-open">
+                        <ion-icon name="menu"></ion-icon>
+                  </div>
+                  <div class="brand">
+                        <span><a href="index.html"><b>INVENTO</b></a></span>
+                  </div>
+                  <div class="menu">
+                        <div class="menu-close">
+                              <ion-icon name="close"></ion-icon>
+                        </div>
+                        <ul>
+                              <li><a href="{% url 'home' %}">Home</a></li>
+                              <li><a href="{% url 'general' %}">General Events</a></li>
+                              <li><a href="{% url 'cse' %}">CSE Events</a></li>
+                              <li><a href="{% url 'ece' %}">ECE Events</a></li>
+                              <li><a href="{% url 'eee' %}">EEE Events</a></li>
+                              <li><a href="{% url 'it' %}">IT Events</a></li>
+                              <li><a href="{% url 'me' %}">ME Events</a></li>
+                              <li><a href="{% url 'about' %}">About Us</a></li>
+                        </ul>
+                  </div>
+            </div>
 
-                                                                                                                                <div class="lineup-artists-description-container">
-                                                                                                                                                <div class="entry-title">
-                                                                                                                                                                Battle Of Bands
-                                                                                                                                                </div><!-- entry-title -->
+            <!-- NAVIGATION ENDS -->
 
-                                                                                                                                                <div class="entry-content">
-                                                                                                                                                                <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. </p>
-                                                                                                                                                </div><!-- entry-content -->
+            <!-- HERO SECTION STARTS -->
 
-                                                                                                                                                <div class="box-link">
-                                                                                                                                                                <a href="#"><img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
-                                                                                                                                                </div><!-- box-link -->
-                                                                                                                                </div><!-- lineup-artists-description-container -->
-                                                                                                                </div><!-- lineup-artists-description -->
+            <div class="hero-section">
+                  <div class="container-fluid">
+                        <div class="row">
+                              <div class="col-lg-6 hero-left">
+                                    <div class="hero-image">
+                                            <img src="{% static 'invento19/images/logo.png' %}" class="img wow fadeInUp" data-wow-delay="0.3s" alt="">
+                                            <div class="College "><p>Government Engineering College Sreekrishnapuram</p></div>
+                                    </div>
+                              </div>
+                              <div class="col-lg-6 hero-right">
+                                    <div class="hero-image2 fadeInUp">
+                                            <img src="{% static 'invento19/images/text.svg' %}" class="img wow fadeInUp" data-wow-delay="0.3s" alt="">
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
 
-                                                                                                                <figure class="featured-image d-none d-md-block">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/mathew-kane.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
-                                                                                                </div><!-- lineup-artists-wrap -->
+            <!-- HERO SECTION ENDS -->
 
-                                                                                                <div class="lineup-artists-wrap flex flex-wrap">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/eric-ward.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+            <!-- PRODUCT LIST STARTS -->
 
-                                                                                                                <div class="lineup-artists-description">
-                                                                                                                                <div class="lineup-artists-description-container">
-                                                                                                                                                <div class="entry-title">
-                                                                                                                                                                GEC Roadies
-                                                                                                                                                </div><!-- entry-title -->
+            <div class="section prod-list">
+                  <div class="container-fluid">
+                        <div class="row some-cards">
+                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.5s">
+                                    <a href="product.html">
+                                          <p id="price">USD $20.00</p>
+                                          <img src="images/prod-04.jpg" alt="">
+                                          <p id="prod-desc">Daily Planner 2017 in Green</p>
+                                    </a>
+                              </div>
+                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.8s">
+                                    <a href="product.html">
+                                          <p id="price">USD $30.00</p>
+                                          <img src="images/prod-05.jpg" alt="">
+                                          <p id="prod-desc">Daily Planner 2017/18 in Blue</p>
+                                    </a>
+                              </div>
+                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="1.1s">
+                                    <a href="product.html">
+                                          <p id="price">USD $10.00</p>
+                                          <img src="images/prod-06.jpg" alt="">
+                                          <p id="prod-desc">Daily Planner 2019 in Brown</p>
+                                    </a>
+                              </div>
+                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="1.4s">
+                                    <a href="product.html">
+                                          <p id="price">USD $25.00</p>
+                                          <img src="images/prod-07.jpg" alt="">
+                                          <p id="prod-desc">Daily Planner 2017 in Dark Brown</p>
+                                    </a>
+                              </div>
+                              <!-- <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="1.7s">
+                                <a href="product.html">
+                                      <p id="price">USD $25.00</p>
+                                      <img src="images/prod-07.jpg" alt="">
+                                      <p id="prod-desc">Daily Planner 2017 in Dark Brown</p>
+                                </a>
+                          </div> -->
+                        </div>
+                  </div>
+            </div>
 
-                                                                                                                                                <div class="entry-content">
-                                                                                                                                                                <p>Quisque at erat eu libero consequat tempus. Quisque mole stie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. </p>
-                                                                                                                                                </div><!-- entry-content -->
+            <!-- PRODUCT LIST ENDS -->
 
-                                                                                                                                                <div class="box-link">
-                                                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""></a>
-                                                                                                                                                </div><!-- box-link -->
-                                                                                                                                </div><!-- lineup-artists-description-container -->
-                                                                                                                </div><!-- lineup-artists-description -->
-                                                                                                </div><!-- lineup-artists-wrap -->
-                                                                                </div><!-- lineup-artists -->
-                                                                </div><!-- lineup-artists-headline -->
-                                                </div><!-- col-12 -->
-                                </div><!-- row -->
-                </div><!-- container -->
-        </div>
+            <!-- BANNER SECTION STARTS -->
 
+            <div class="row prod-sec">
+                  <div class="col-lg-6 prod-img">
+                        <img src="images/single-prod.jpg" alt="">
+                  </div>
 
-        <div class="content-section" id='cmplist'>
-                <div class="container">
-                                <div class="row">
-                                                <div class="col-12">
-                                                                <div class="the-complete-lineup">
-                                                                                <div class="entry-title">
-                                                                                                <h2>The Main Events</h2>
-                                                                                </div><!-- entry-title -->
+                  <div class="col-lg-4 prod-desc">
+                        <br><br>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">The way to get started is to quit talking and begin doing. Get started with our tools and boost your productivity.</p>
 
-                                                                                <div class="row the-complete-lineup-artists">
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-1.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+                        <div class="link wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="shop.html">shop now <ion-icon name="arrow-round-forward"></ion-icon></a>
+                        </div>
+                  </div>
+            </div>
 
-                                                                                                                <h2>Miska Smith</h2>
-                                                                                                </div><!-- artist-single -->
+            <!-- BANNER SECTION ENDS -->
 
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-2.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+            <!-- CATEGORIES SECTION STARTS -->
 
-                                                                                                                <h2>Hayley Down</h2>
-                                                                                                </div><!-- artist-single -->
+            <div class="container-fluid">
+                  <div class="row section shop">
+                        <div class="col-lg-8">
+                              <p class="wow fadeInUp" data-wow-delay="0.4s">Do not wait; the time will never be right. Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along.</p>
 
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-3.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+                              <div class="link wow fadeInUp" data-wow-delay="0.6s">
+                                    <a href="shop.html">learn more <ion-icon name="arrow-round-forward"></ion-icon></a>
+                              </div>
+                        </div>
+                  </div>
 
-                                                                                                                <h2>The Band Song</h2>
-                                                                                                </div><!-- artist-single -->
+                  <div class="container-fluid">
+                        <div class="row some-cards">
+                              <div class="col-lg-3"></div>
 
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-4.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.3s">
+                                    <img src="images/prod-01.jpg" alt="">
+                                    <p id="prod-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptas nulla illum!</p>
+                              </div>
 
-                                                                                                                <h2>Pink Machine</h2>
-                                                                                                </div><!-- artist-single -->
+                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.5s">
+                                    <img src="images/prod-02.jpg" alt="">
+                                    <p id="prod-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptas nulla illum!</p>
+                              </div>
 
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-5.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.7s">
+                                    <img src="images/prod-03.jpg" alt="">
+                                    <p id="prod-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptas nulla illum!</p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
 
-                                                                                                                <h2>Brasil Band</h2>
-                                                                                                </div><!-- artist-single -->
+            <!-- CATEGORIES SECTION ENDS -->
 
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-6.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+            <br><br><br>
 
-                                                                                                                <h2>Mickey</h2>
-                                                                                                </div><!-- artist-single -->
+            <!-- FOOTER STARTS -->
 
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-7.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+            <div class="container-fluid footer">
+                  <div class="section container">
+                        <footer>
+                              <div class="row">
+                                    <div class="col-lg-3 block">
+                                          <p>Wordoutlet, 3581 Lunneta Street,
+                                          <br>
+                                          Siesta Key, Florida. 20002,
+                                          <br>
+                                          USA</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <p>FAQs
+                                          <br>
+                                          Return Policy
+                                          <br>
+                                          Shipping</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <p>Careers
+                                          <br>
+                                          Community
+                                          <br>
+                                          Wholesale</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <div class="media">
+                                                <ul>
+                                                      <li><ion-icon name="logo-facebook"></ion-icon></li>
+                                                      <li><ion-icon name="logo-instagram"></ion-icon></li>
+                                                      <li><ion-icon name="logo-twitter"></ion-icon></li>
+                                                      <li><ion-icon name="logo-pinterest"></ion-icon></li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                              </div>
+                        </footer>
+                  </div>
+            </div>
 
-                                                                                                                <h2>DJ Girl</h2>
-                                                                                                </div><!-- artist-single -->
+            <!-- FOOTER ENDS -->
 
-                                                                                                <div class="col-6 col-md-4 col-lg-3 artist-single">
-                                                                                                                <figure class="featured-image">
-                                                                                                                                <a href="#"> <img src="{% static 'invento19/images/image-2.jpg' %}" alt=""> </a>
-                                                                                                                                <a href="#" class="box-link"> <img src="{% static 'invento19/images/box.jpg' %}" alt=""> </a>
-                                                                                                                </figure><!-- featured-image -->
+      </div>
 
-                                                                                                                <h2>Stan Smith</h2>
-                                                                                                </div><!-- artist-single -->
-                                                                                </div><!-- the-complete-lineup-artists -->
+      <script type="text/javascript">
 
-                                                                                <div class="row justify-content-center">
-                                                                                                <div class="see-complete-lineup">
-                                                                                                                <div class="entry-footer">
-                                                                                                                                <a href="#" class="btn">See all events</a>
-                                                                                                                </div>
-                                                                                                </div>
-                                                                                </div>
-                                                                </div><!-- the-complete-lineup -->
-                                                </div><!-- col-12 -->
-                                </div><!-- row -->
-                </div><!-- container -->
-        </div>
+      //Scroll reveal animations
 
+      new WOW().init();
 
+      //Scroll activated background change
+      $(function() {
+            $(document).scroll(function() {
+                  var $nav = $(".nav");
+                  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+      });
 
+      //Toggle MENU
 
-</div>
+      var t1 = new TimelineMax({paused: true});
+      t1.to(".menu", 0.5, {
+            left: "0%",
+            ease: Power2.easeInOut
+      });
 
-{% endblock %}
+      t1.reverse();
+      $(document).on("click", ".menu-open", function() {
+            t1.reversed(!t1.reversed());
+      });
+      $(document).on("click", ".menu-close", function() {
+            t1.reversed(!t1.reversed());
+      });
+
+      </script>
+</body>
+</html>

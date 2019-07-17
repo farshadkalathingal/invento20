@@ -14,21 +14,15 @@ from invento18.events.serializers import EventList
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
-
     url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
     url(r'share/$', TemplateView.as_view(template_name='pages/ambassador.html'), name='share'),
-    url(r'sanjeevani/$', TemplateView.as_view(template_name='pages/sanjeevani.html'), name='sanjeevani'),
-    url(r'sponsors/$', TemplateView.as_view(template_name='pages/sponsors.html'), name='sponsors'),
-
     url(r'api/v1/events/(?P<category>[\w]{1,3})/(?P<_type>[\w]{0,3})', EventList.as_view()),
-
     url(r'^general/$', departmentview, name='general'),
     url(r'^cse/$', departmentview, name='cse'),
     url(r'^ece/$', departmentview, name='ece'),
     url(r'^eee/$', departmentview, name='eee'),
     url(r'^it/$', departmentview, name='it'),
     url(r'^me/$', departmentview, name='me'),
-
     url(r'^events/(?P<pk>\d+)/$', EventDetailView.as_view(), name='event-view'),
     url(r'^wp-content/uploads/2018/02/Invento18-CSE-Brochure.pdf',
         RedirectView.as_view(url="https://images.inventogec.org/invento18csebrochure.pdf")),

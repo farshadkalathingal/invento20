@@ -1,124 +1,204 @@
-{% extends "base.html" %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="harrnish - ig@harrnish">
+      <link rel="icon" href="yourIconUrl" type="image/gif" sizes="16x16">
+      <title>{{ event.title }} - Invento 19</title>
 
-{% block title %}
-{{ event.title }} - Invento 18
-{% endblock %}
+      <!-- bootstrapcdn -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-{% block meta %}
-<meta property="og:site_name" content="Invento 18" />
-<meta property="og:title" content={{event.title}}" Invento 18">
-<meta property="og:description" content="{{ event.title }} is a {{ event.get_category_display }} event of Invento 18. Be a part of the tech extravaganza of Invento 18.">
-{% endblock %}
+      <!-- external stylesheet -->
+      <link rel="stylesheet" href="{% static 'invento19/css/style.css' %}">
 
-{% block content %}
+      <!-- icon pack -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-<!-- Main -->
-<div class="page" id="page-home">
-<div id="main">
+      <!-- google font -->
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Overpass:100,300,400,700,800&display=swap" rel="stylesheet"> 
+      <!-- jquery cdn -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-    <section class="wrapper style1">
-        <div class="inner">
-            <header class="align-center">
-                <h2>{{event.title}}</h2>
-                {% if request.user.is_staff %}
-                  <a href="{{ event.get_admin_url }}">Edit this event as editor</a>
-                {% endif %}
-                <a href="#" class="button special">
-                  Spot registration available!
-                </a>
-                </blockquote>
-            </header>
-            <span class="image fit detail">
-              <img src="{% if event.posterurl %}
-              {{ event.posterurl }}
-              {% else %}
-              {{ event.imageurl }}
-              {% endif %}" alt="" />
-            </span>
+      <!-- tweenmax (greensock) cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
-        </div>
-    </section>
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="{% static 'invento19/css/animate.css' %}">
+      <script src="{% static 'invento19/js/wow.min.js' %}"></script>
+</head>
+</head>
+<body>
+      <div class="product-container">
 
-    <!-- Three -->
-    <section class="wrapper style1">
+            <!-- NAVIGATION STARTS -->
 
-
-        <div class="inner">
-            <!-- 3 Column Video Section -->
-            <header class="align-left">
-                {% if event.day == 1 %}
-                <h2>March 16</h2>
-                {% elif event.day == 2 %}
-                <h2>March 17</h2>
-                {% elif event.day == 3 %}
-                <h2>March 18</h2>
-                {% endif %}
-            </header>
-            <div class="row 200%">
-                <div class="6u 12u$(medium)">
-                    <hr />
-
-                    <h2>CATEGORY</h2>
-
-                    {{event.get_category_display}}
-
-                    <hr />
-
-
-                    <h2>DETAILS</h2>
-
-                    {{event.description | linebreaks }}
-
-                    <hr />
-
-                    {% if event.pdfurl %}
-
-                    <h2>Rules</h2>
-
-                    <a href="{{event.pdfurl}}">Download pdf</a>
-
-                    <hr />
-                    {% endif %}
-
-                </div>
-
-                <div class="6u$ 12u$(medium)">
-
-                    <hr/>
-                    <!-- Text stuff -->
-                    {% if event.prize %}
-                    <h2>Winner takes home</h2>
-                    {{event.prize}} ₹
-                    <hr/>
-                    {% endif %}
-                    <h2>CONTACT</h2>
-                    {{event.coordinators|linebreaks}}
-                    <hr />
-                    <h2>REGISTER</h2>
-                    <h3>{{event.fee}} ₹</h3>
-                    {% if event.townscript_code %}
-                      <button onclick="popup('{{ event.townscript_code }}');" class="tsbutton">Register Now</button>
-                      <noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript>
-                      <script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
-                    {% else %}
-                      <button class="tsbutton">Registration opens soon!</button>
-                    {% endif %}
-
-                    <hr />
-
-
-
-                </div>
+            <div class="nav">
+                  <div class="menu-open">
+                        <ion-icon name="menu"></ion-icon>
+                  </div>
+                  <div class="brand">
+                        <span><a href="index.html"><b>INVENTO</b></a></span>
+                  </div>
+                  <div class="menu">
+                        <div class="menu-close">
+                              <ion-icon name="close"></ion-icon>
+                        </div>
+                        <ul>
+                              <li><a href="{% url 'home' %}">Home</a></li>
+                              <li><a href="{% url 'general' %}">General Events</a></li>
+                              <li><a href="{% url 'cse' %}">CSE Events</a></li>
+                              <li><a href="{% url 'ece' %}">ECE Events</a></li>
+                              <li><a href="{% url 'eee' %}">EEE Events</a></li>
+                              <li><a href="{% url 'it' %}">IT Events</a></li>
+                              <li><a href="{% url 'me' %}">ME Events</a></li>
+                              <li><a href="{% url 'about' %}">About Us</a></li>
+                        </ul>
+                  </div>
             </div>
-        </div>
-
-    </section>
 
 
+            <!-- NAVIGATION ENDS -->
+
+            <!-- PRODUCT STARTS HERE -->
+
+            <div class="container-fluid">
+                  <div class="row product-sec">
+                        <div class="col-lg-6 prod-left">
+                              <div class="hero-image">
+                                    <img src="{% static 'invento19/images/prod-04.jpg' %}" class="img wow fadeInUp" alt="">
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 prod-right">
+                              <div class="prod-opt">
+                                    <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.1s"> {{event.title}} </h3>                                   
+                                    <div class="input-row wow fadeInUp"  data-wow-delay="0.3s">
+                                          <input type="radio" id="radio-input-1" checked>
+                                          <label for="radio-input-1" class="input-helper input-helper--radio"> <span>Details</span> : {{event.description | linebreaksbr }} </label>  <br> 
+                                          <input type="radio" id="radio-input-1" checked>
+                                          <label for="radio-input-1" class="input-helper input-helper--radio"> <span>Category</span> : {{event.get_category_display}}</label>  <br>                                   
+                                          <input type="radio" id="radio-input-1" checked>
+                                          <label for="radio-input-1" class="input-helper input-helper--radio"> <span>Day</span> : {% if event.day == 1 %} March 16 {% elif event.day == 2 %} March 17 {% elif event.day == 3 %} March 18 {% endif %}</label>  <br>                                                                     
+                                          <input type="radio" id="radio-input-1" checked>
+                                          <label for="radio-input-1" class="input-helper input-helper--radio"> <span>Fee</span> : {{ event.fee }} </label>   <br>                                 
+                                          <input type="radio" id="radio-input-1" checked>
+                                          <label for="radio-input-1" class="input-helper input-helper--radio"> <span>Contact</span> : {{event.coordinators|linebreaksbr }} </label>   <br>                                 
+                                          {% if event.pdfurl %}
+                                          <input type="radio" id="radio-input-1" checked>
+                                          <label for="radio-input-1" class="input-helper input-helper--radio"> <span>Rules</span> : <a href="{{event.pdfurl}}">Download pdf</a> </label>   <br>                                 
+                                          {% endif %}
+                                          {% if event.prize %}
+                                          <input type="radio" id="radio-input-1" checked>
+                                          <label for="radio-input-1" class="input-helper input-helper--radio"> <span>Prize</span> : {{ event.prize }}K </label> </label>
+                                          {% endif %}
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <!-- PRODUCT ENDS HERE -->
+
+            <!-- CATEGORIES SECTION STARTS -->
+
+            <!-- <div class="container-fluid">
+                  <div class="row section shop">
+                        <div class="col-lg-8">
+                              <p class="wow fadeInUp" data-wow-delay="0.4s"> {{event.description}} </p>
+
+                              <div class="link wow fadeInUp" data-wow-delay="0.6s">
+                                    <a href="shop.html">learn more <ion-icon name="arrow-round-forward"></ion-icon></a>
+                              </div>
+                        </div>
+                  </div>
+            </div> -->
 
 
-</div>
-</div>
+            <!-- CATEGORIES SECTION ENDS -->
 
-{% endblock %}
+            <div class="whitespaces"></div>
+
+            <!-- FOOTER STARTS -->
+
+            <div class="container-fluid footer">
+                  <div class="section container">
+                        <footer>
+                              <div class="row">
+                                    <div class="col-lg-3 block">
+                                          <p>Wordoutlet, 3581 Lunneta Street,
+                                          <br>
+                                          Siesta Key, Florida. 20002,
+                                          <br>
+                                          USA</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <p>FAQs
+                                          <br>
+                                          Return Policy
+                                          <br>
+                                          Shipping</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <p>Careers
+                                          <br>
+                                          Community
+                                          <br>
+                                          Wholesale</p>
+                                    </div>
+                                    <div class="col-lg-3 block">
+                                          <div class="media">
+                                                <ul>
+                                                      <li><ion-icon name="logo-facebook"></ion-icon></li>
+                                                      <li><ion-icon name="logo-instagram"></ion-icon></li>
+                                                      <li><ion-icon name="logo-twitter"></ion-icon></li>
+                                                      <li><ion-icon name="logo-pinterest"></ion-icon></li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                              </div>
+                        </footer>
+                  </div>
+            </div>
+
+            <!-- FOOTER ENDS -->
+      </div>
+
+      <script type="text/javascript">
+
+      //Scroll reveal animations
+
+      new WOW().init();
+
+      //Scroll activated background change
+      $(function() {
+            $(document).scroll(function() {
+                  var $nav = $(".nav");
+                  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+      });
+
+      //Toggle MENU
+
+      var t1 = new TimelineMax({paused: true});
+      t1.to(".menu", 0.5, {
+            left: "0%",
+            ease: Power2.easeInOut
+      });
+
+      t1.reverse();
+      $(document).on("click", ".menu-open", function() {
+            t1.reversed(!t1.reversed());
+      });
+      $(document).on("click", ".menu-close", function() {
+            t1.reversed(!t1.reversed());
+      });
+
+      </script>
+</body>
+</html>
