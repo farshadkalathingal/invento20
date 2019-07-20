@@ -75,12 +75,14 @@
                               <div class="row some-cards">
 									{% for workshop in events %}
                                     <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.5s">
+                                          <div class="prod-holder">
                                           <a href="/events/{{ workshop.pk }}">
-                                                <p id="price"> {{ workshop.title }} </p>
                                                 <img src="{% static 'invento19/images/prod-04.jpg' %}" alt="">
+                                                <p id="price"> {{ workshop.title }} </p>
                                                 <p id="prod-desc"> {{ workshop.description }} </p>
                                           </a>
-									</div>
+                                          </div>
+						</div>
 									{% endfor %}
                               </div>
                         </div>

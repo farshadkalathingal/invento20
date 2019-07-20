@@ -1,4 +1,8 @@
 
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+
 html, body {
       margin: 0;
       padding: 0;
@@ -259,16 +263,22 @@ img {
 }
 
 #price {
-      font-family: "Larsseit";
-      font-weight: 300;
+      font-family: "Overpass";
+      font-weight: bold;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
+      font-size: 15px;
+      padding-top: 1rem;
+      text-align: center;
+      color: #fff;
 }
 
 .prod-list #prod-desc {
-      font-family: "Larsseit";
-      color: grey;
+      font-family: "Overpass";
+      color: #fff;
+      font-size: 12px;
+      padding-bottom: 1rem;
+      text-align: center;
+      font-weight: 300;
 }
 
 /* FOOTER */
@@ -414,6 +424,17 @@ input[type="radio"]:checked + label:before {
       letter-spacing: 4px;
       padding-left: 10px;
       padding-bottom: 3px;
+}
+
+.prod-holder {
+      background: #e52828;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      box-shadow: 6px 8px 19px 1px #000000;
+}
+
+.prod-holder img {
+      border-radius: 5px;
 }
 
 .product-sec input {
