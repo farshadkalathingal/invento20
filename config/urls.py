@@ -13,6 +13,8 @@ from invento18.events.serializers import EventList
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'^login/$', TemplateView.as_view(template_name='pages/login.html'), name='login'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
     url(r'^3d/$', TemplateView.as_view(template_name='pages/3d.html'), name='3d'),
     url(r'share/$', TemplateView.as_view(template_name='pages/ambassador.html'), name='share'),
