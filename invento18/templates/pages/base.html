@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="harrnish - ig@harrnish">
+      <link rel="icon" href="yourIconUrl" type="image/gif" sizes="16x16">
+      <title>EEE Events - Invento 19</title>
+
+      <!-- bootstrapcdn -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- external stylesheet -->
+      <link rel="stylesheet" href="{% static 'invento19/css/style.css' %}">
+
+      <!-- icon pack -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+      <!-- google font -->
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Overpass:100,300,400,700,800&display=swap" rel="stylesheet">
+      <!-- jquery cdn -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+      <!-- tweenmax (greensock) cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="{% static 'invento19/css/animate.css' %}">
+      <script src="{% static 'invento19/js/wow.min.js' %}"></script>
+</head>
+<body>
+      <div class="shop-container">
+
+            <!-- NAVIGATION STARTS -->
+
+            <div class="nav">
+                  <div class="menu-open">
+                        <ion-icon name="menu"></ion-icon>
+                  </div>
+                  <div class="brand">
+                    <span><a href="{% url 'home' %}"><b>INVENTO</b></a></span>
+                  </div>
+                  <div class="menu">
+                        <div class="menu-close">
+                              <ion-icon name="close"></ion-icon>
+                        </div>
+                        <ul>
+                              <li><a href="{% url 'home' %}">Home</a></li>
+                              <li><a href="{% url 'general' %}">General Events</a></li>
+                              <li><a href="{% url 'cse' %}">CSE Events</a></li>
+                              <li><a href="{% url 'ece' %}">ECE Events</a></li>
+                              <li><a href="{% url 'eee' %}">EEE Events</a></li>
+                              <li><a href="{% url 'it' %}">IT Events</a></li>
+                              <li><a href="{% url 'me' %}">ME Events</a></li>
+                              <li><a href="{% url 'about' %}">About Us</a></li>
+                        </ul>
+                  </div>
+            </div>
+      </div>
