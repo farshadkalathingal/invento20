@@ -7,7 +7,6 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta name="author" content="harrnish - ig@harrnish">
       <link rel="icon" href="yourIconUrl" type="image/gif" sizes="16x16">
-      <title>EEE Events - Invento 19</title>
 
       <!-- bootstrapcdn -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -42,7 +41,7 @@
                         <ion-icon name="menu"></ion-icon>
                   </div>
                   <div class="brand">
-                    <span><a href="{% url 'home' %}"><b>INVENTO</b></a></span>
+                    <span><a href="{% url 'home' %}"><b>INVENTO 2K19</b></a></span>
                   </div>
                   <div class="menu">
                         <div class="menu-close">
@@ -61,3 +60,82 @@
                   </div>
             </div>
       </div>
+      {% block content %}
+      {% endblock %}
+      <!-- FOOTER STARTS -->
+
+      <div class="container-fluid footer">
+            <div class="section container">
+                  <footer>
+                        <div class="row">
+                              <div class="col-lg-3 block">
+                                    <p>Government Engineering College,<br>
+                                    Mannampatta PO,<br>
+                                    Palakkad, Kerala,<br>
+                                    India - 678633</p>
+                              </div>
+                              <div class="col-lg-3 block">
+                                    <p>FAQs
+                                    <br>
+                                    Return Policy
+                                    <br>
+                                    Shipping</p>
+                              </div>
+                              <div class="col-lg-3 block">
+                                    <p>Careers
+                                    <br>
+                                    Community
+                                    <br>
+                                    Wholesale</p>
+                              </div>
+                              <div class="col-lg-3 block">
+                                    <div class="media">
+                                          <ul>
+                                                <li><a href="https://www.facebook.com/inventogec/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                                <li><a href="https://www.instagram.com/inventogecpalakkad/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                                <li><a href="https://www.google.com/maps/dir//10.903552,76.434739/@10.903552,76.434739,16z?hl=en-AU"><ion-icon name="pin"></ion-icon></a></li>
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+                  </footer>
+            </div>
+      </div>
+
+      <!-- FOOTER ENDS -->
+
+</div>
+<script type="text/javascript">
+
+//Scroll reveal animations
+
+new WOW().init();
+
+//Scroll activated background change
+$(function() {
+      $(document).scroll(function() {
+            var $nav = $(".nav");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+});
+
+//Toggle MENU
+
+var t1 = new TimelineMax({paused: true});
+t1.to(".menu", 0.5, {
+      left: "0%",
+      ease: Power2.easeInOut
+});
+
+t1.reverse();
+$(document).on("click", ".menu-open", function() {
+      t1.reversed(!t1.reversed());
+});
+$(document).on("click", ".menu-close", function() {
+      t1.reversed(!t1.reversed());
+});
+
+
+</script>
+</body>
+</html>
