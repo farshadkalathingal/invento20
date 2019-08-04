@@ -30,8 +30,11 @@
       <!-- for on scroll animations -->
       <link rel="stylesheet" href="{% static 'invento19/css/animate.css' %}">
       <script src="{% static 'invento19/js/wow.min.js' %}"></script>
+
+
+
 </head>
-<body>
+<body><div id="body">
       <div class="shop-container">
 
             <!-- NAVIGATION STARTS -->
@@ -101,10 +104,12 @@
                   </footer>
             </div>
       </div>
+      </div>
+
 
       <!-- FOOTER ENDS -->
 
-</div>
+<!-- for Particle JS -->
 <script type="text/javascript">
 
 //Scroll reveal animations
@@ -134,8 +139,6 @@ $(document).on("click", ".menu-open", function() {
 $(document).on("click", ".menu-close", function() {
       t1.reversed(!t1.reversed());
 });
-
-
 </script>
 </body>
 </html>
