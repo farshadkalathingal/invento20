@@ -1,7 +1,7 @@
 Invento19
 =========
 
- Website of Invento 18, annual national multifest of GEC Palakkad
+ Website of Invento 19, annual national multifest of GEC Palakkad
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
