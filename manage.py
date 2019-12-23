@@ -7,7 +7,7 @@ if __name__ == '__main__':
     env = environ.Env()
 
     #if .env exists we're expecting a dev enironment, hence config.settings.local is loaded
-    READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
+    READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=True)
     if READ_DOT_ENV_FILE:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')
     else:

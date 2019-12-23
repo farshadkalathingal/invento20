@@ -16,7 +16,7 @@ APPS_DIR = ROOT_DIR.path('invento18')
 env = environ.Env()
 
 # .env file, should load only in development environment
-READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
+READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=True)
 
 if READ_DOT_ENV_FILE:
     # Operating System Environment variables have precedence over variables defined in the .env file,
@@ -115,7 +115,7 @@ MANAGERS = ADMINS
 # Uses django-environ to accept uri format
 # See: https://django-environ.readthedocs.io/en/latest/#supported-types
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///invento18'),
+    'default': env.db('DATABASE_URL', default='postgres://Hemang:hemang@127.0.0.1/inventodb'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
