@@ -17,6 +17,7 @@ import os
 import sys
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise.django import DjangoWhiteNoise
 
 # This allows easy placement of apps within the interior
 # invento18 directory.
@@ -36,7 +37,8 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
 # setting points here.
-application = get_wsgi_application()
+#application = get_wsgi_application()
+application = DjangoWhiteNoise(application)
 if os.environ.get('DJANGO_SETTINGS_MODULE') == 'config.settings.production':
     application = Sentry(application)
     # application = DjangoWhiteNoise(application)
