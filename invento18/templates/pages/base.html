@@ -14,6 +14,7 @@
 
       <!-- external stylesheet -->
       <link rel="stylesheet" href="{% static 'invento19/css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'invento19/css/main.css' %}">
 
       <!-- icon pack -->
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -40,13 +41,13 @@
             <!-- NAVIGATION STARTS -->
 
             <div class="nav">
-                  <div class="menu-open">
+                  <!--<div class="menu-open">
                         <ion-icon name="menu"></ion-icon>
-                  </div>
+                  </div>-->
                   <div class="brand">
-                    <span><a href="{% url 'home' %}"><b>INVENTO 2K19</b></a></span>
+                    <span><a href="{% url 'home' %}"><b>INVENTO 2020</b></a></span>
                   </div>
-                  <div class="menu">
+                  <!--<div class="menu">
                         <div class="menu-close">
                               <ion-icon name="close"></ion-icon>
                         </div>
@@ -60,7 +61,7 @@
                               <li><a href="{% url 'me' %}">ME Events</a></li>
                               <li><a href="{% url 'about' %}">About Us</a></li>
                         </ul>
-                  </div>
+                  </div>-->
             </div>
       </div>
       {% block content %}
@@ -69,39 +70,53 @@
 
       <div class="container-fluid footer">
             <div class="section container">
-                  <footer>
-                        <div class="row">
-                              <div class="col-lg-3 block">
-                                    <p>Government Engineering College,<br>
-                                    Mannampatta PO,<br>
-                                    Palakkad, Kerala,<br>
-                                    India - 678633</p>
-                              </div>
-                              <div class="col-lg-3 block">
-                                    <p>FAQs
-                                    <br>
-                                    Return Policy
-                                    <br>
-                                    Shipping</p>
-                              </div>
-                              <div class="col-lg-3 block">
-                                    <p>Careers
-                                    <br>
-                                    Community
-                                    <br>
-                                    Wholesale</p>
-                              </div>
-                              <div class="col-lg-3 block">
-                                    <div class="media">
-                                          <ul>
-                                                <li><a href="https://www.facebook.com/inventogec/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                                                <li><a href="https://www.instagram.com/inventogecpalakkad/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                                                <li><a href="https://www.google.com/maps/dir//10.903552,76.434739/@10.903552,76.434739,16z?hl=en-AU"><ion-icon name="pin"></ion-icon></a></li>
-                                          </ul>
-                                    </div>
-                              </div>
-                        </div>
-                  </footer>
+              <footer id="footer">
+                <div class="inner">
+                  <div class="flex flex-3">
+                    <div class="col">
+                      <h3>Contact Us</h3>
+                      <ul class="alt">
+                        <li><b>Coordinator</b></li>
+                        <li>Roy Antony - 7907160314</li>
+                        <li><b>Secretary</b></li>
+                        <li>Rentu Sussan - 7902418037</li>
+                        <li><b>Program Convenor</b></li>
+                        <li>Karthik P S - 8078128410</li>
+                        <li><b>Staff Coordinator</b></li>
+                        <li>Dr. A R Jayan - 8129418002</li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h3>Address</h3>
+                      <ul class="alt">
+                        <li>Government Engineering College</li>
+                        <li>Mannampatta</li>
+                        <li>Sreekrishnapuram</li>
+                        <li>Palakkad</li>
+                        <li>Kerala</li>
+                        <li>Pin 678633</li>
+                        <li><b><a href="https://goo.gl/maps/UL5GNMi9VQu">Get Directions on Google Maps</a></b></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h3>Made with <i class="icon fa-heart" style="color:red"></i>	 at GEC Palakkad</h3>
+                      <ul class="alt">
+                        <li style="text-align:center"><b>./tech_team</b></li>
+                        <!--<li style="text-align:center"><b><a href="{% url 'about' %}">About Us</a></b></li>-->
+                        <li style="text-align:center">Found a bug or mistake? Whatsapp: <a href="https://api.whatsapp.com/send?phone=919447806863"><b>+919447806863</a></b></li>
+                        <li style="text-align:center">© <a href="/"><b>Invento 2020</b></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="copyright">
+                  <ul class="icons">
+                    <li><a href="https://twitter.com/inventogec" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://facebook.com/inventogec" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/inventogec/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                  </ul>
+                </div>
+              </footer>
             </div>
       </div>
       </div>
