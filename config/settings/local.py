@@ -31,7 +31,7 @@ EMAIL_PORT = 1025
 EMAIL_HOST = 'localhost'
 
 #ngrok can be used for tunneling from localhost
-ALLOWED_HOSTS = ['59a633ad.ngrok.io', '127.0.0.1', 'localhost', '192.168.0.130', '0.0.0.0', '192.168.43.164', ]
+ALLOWED_HOSTS = ['59a633ad.ngrok.io', '127.0.0.1', 'localhost', '192.168.0.130', '0.0.0.0', '192.168.43.164', 'invento20.herokuapp.com',]
 
 # CACHING
 # ------------------------------------------------------------------------------
