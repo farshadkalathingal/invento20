@@ -30,34 +30,29 @@
             <div class="section prod-list">
                   <div class="container-fluid">
                         <div class="row some-cards">
-                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.5s">
-                                    <a href="product.html">
-                                          <p id="price">USD $20.00</p>
-                                          <img src="images/prod-04.jpg" alt="">
-                                          <p id="prod-desc">Daily Planner 2017 in Green</p>
-                                    </a>
+                                <center><h1><p id="COUNT"></p></<h1></center>
+                                <script>
+                                  var countDownDate = new Date("mar 05, 2020 12:00:00").getTime();
+                                  var x = setInterval(function() {
+                                    var now = new Date().getTime();
+                                    var distance = countDownDate - now;
+                                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 *
+                                    60 * 60));
+                                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 *
+                                    60));
+                                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                    document.getElementById("COUNT").innerHTML = days + "D " +
+                                    hours + "H "
+                                    + minutes + "M " + seconds + "S ";
+                                    if (distance < 0) {
+                                      clearInterval(x);
+                                      document.getElementById("COUNT").innerHTML = "EXPIRED";
+                                    }
+                                  }, 1000);
+                                </script>
                               </div>
-                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="0.8s">
-                                    <a href="product.html">
-                                          <p id="price">USD $30.00</p>
-                                          <img src="images/prod-05.jpg" alt="">
-                                          <p id="prod-desc">Daily Planner 2017/18 in Blue</p>
-                                    </a>
-                              </div>
-                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="1.1s">
-                                    <a href="product.html">
-                                          <p id="price">USD $10.00</p>
-                                          <img src="images/prod-06.jpg" alt="">
-                                          <p id="prod-desc">Daily Planner 2019 in Brown</p>
-                                    </a>
-                              </div>
-                              <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="1.4s">
-                                    <a href="product.html">
-                                          <p id="price">USD $25.00</p>
-                                          <img src="images/prod-07.jpg" alt="">
-                                          <p id="prod-desc">Daily Planner 2017 in Dark Brown</p>
-                                    </a>
-                              </div>
+
                               <!-- <div class="col-lg-3 prod wow fadeInUp" data-wow-delay="1.7s">
                                 <a href="product.html">
                                       <p id="price">USD $25.00</p>
@@ -74,17 +69,10 @@
             <!-- BANNER SECTION STARTS -->
 
             <div class="row prod-sec">
-                  <div class="col-lg-6 prod-img">
-                        <img src="images/single-prod.jpg" alt="">
-                  </div>
 
                   <div class="col-lg-4 prod-desc">
                         <br><br>
-                        <p class="wow fadeInUp" data-wow-delay="0.5s">The way to get started is to quit talking and begin doing. Get started with our tools and boost your productivity.</p>
-
-                        <div class="link wow fadeInUp" data-wow-delay="0.6s">
-                              <a href="shop.html">shop now <ion-icon name="arrow-round-forward"></ion-icon></a>
-                        </div>
+                        <center><h1>COMING SOON</h1></center>
                   </div>
             </div>
 
@@ -95,11 +83,7 @@
             <div class="container-fluid">
                   <div class="row section shop">
                         <div class="col-lg-8">
-                              <p class="wow fadeInUp" data-wow-delay="0.4s">Do not wait; the time will never be right. Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along.</p>
 
-                              <div class="link wow fadeInUp" data-wow-delay="0.6s">
-                                    <a href="shop.html">learn more <ion-icon name="arrow-round-forward"></ion-icon></a>
-                              </div>
                         </div>
                   </div>
 
