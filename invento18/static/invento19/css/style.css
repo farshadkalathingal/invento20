@@ -120,13 +120,13 @@ html, body {
 
 .hero-left {
       height: 100vh;
-      background: #330033;
+      background: #2f302b;
       z-index: 0;
 }
 
 .hero-right {
       height: 100vh;
-      background: #383838;
+      background: #ff7129;
       z-index: 0;
 }
 
