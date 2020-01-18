@@ -126,7 +126,7 @@ html, body {
 
 .hero-right {
       height: 100vh;
-      background: #ff7129;
+      background: #EEB609;
       z-index: 0;
 }
 
@@ -214,6 +214,26 @@ img {
             margin-right: 0;
       }
 }
+.text{
+	width: 100%;
+	margin-top: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	color:white;
+}
+
+.text h1{
+	font-size: 80px;
+    color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.text h2{
+	font-size: 25px;
+color: #993399;
+	font-family: 'Open Sans', sans-serif;
+}
+
 
 /* SECTON BASIC */
 
@@ -226,6 +246,28 @@ img {
       font-size: 24px;
       font-weight: 300;
 }
+
+
+.count{
+  margin: 40px 0;
+}
+.countd{
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border: 2px solid;
+  margin: 0 30px;
+  font-size: 20px;
+  font-style: bold;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.countd span{
+  display: block;
+  font-size: 26px;
+  margin-top: 14px;
+}
+
 
 /* PRODUCT / BANNER SEC */
 
@@ -328,6 +370,12 @@ img {
 
 .collection .section {
       margin: -50px 0;
+}
+.p{
+    margin-left: 80px;
+    margin-right: 80px;
+    
+}
 }
 
 
