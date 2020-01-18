@@ -120,15 +120,16 @@ html, body {
 
 .hero-left {
       height: 100vh;
-      background: #2f302b;
+      background: #EEB609;
+      color: #000000;
       z-index: 0;
 }
 
-.hero-right {
+/*.hero-right {
       height: 100vh;
-      background: #EEB609;
+      background: #2f302b;
       z-index: 0;
-}
+}*/
 
 .tagline {
       font-family: 'Overpass', sans-serif;
@@ -176,9 +177,9 @@ img {
 }
 .College {
       font-family: 'Overpass';
-      font-size: 20px;
+      font-size: 22px;
       text-align: center;
-      font-weight: 400;
+      font-weight: 1000;
       text-transform: uppercase;
 }
 
@@ -242,7 +243,7 @@ color: #993399;
 }
 
 .section p {
-      font-family: "Playfair Display";
+      font-family: 'Bebas Neue';
       font-size: 24px;
       font-weight: 300;
 }
@@ -374,7 +375,7 @@ color: #993399;
 .p{
     margin-left: 80px;
     margin-right: 80px;
-    
+
 }
 }
 
