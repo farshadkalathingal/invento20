@@ -125,11 +125,11 @@ html, body {
       z-index: 0;
 }
 
-.hero-right {
+/*.hero-right {
       height: 100vh;
       background: #15171c;
       z-index: 0;
-}
+}*/
 
 .tagline {
       font-family: 'Overpass', sans-serif;
@@ -157,7 +157,6 @@ a {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: auto;
       transform: translate(-50%, -50%);
 }
 
@@ -204,13 +203,7 @@ img {
 
 @media(max-width: 900px) {
       .hero-image2 {
-            display: block;
-      }
-      .count {
-            display: block;
-      }
-      .countd {
-            display: block;
+            display: none;
       }
       .media {
             position: absolute;
@@ -255,11 +248,6 @@ color: #993399;
       font-weight: 300;
 }
 
-@media(max-width: 900px) {
-      .section {
-            display: block;
-      }
-}
 
 .count{
   margin: 40px 0;
@@ -313,7 +301,6 @@ color: #993399;
 
 @media(max-width: 900px) {
       .prod-sec {
-            display: block;
             padding-left: 30px;
             width: 100%;
             border: none;
