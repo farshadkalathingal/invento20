@@ -125,11 +125,11 @@ html, body {
       z-index: 0;
 }
 
-/*.hero-right {
+.hero-right {
       height: 100vh;
-      background: #2f302b;
+      background: #15171c;
       z-index: 0;
-}*/
+}
 
 .tagline {
       font-family: 'Overpass', sans-serif;
@@ -157,6 +157,7 @@ a {
       position: absolute;
       top: 50%;
       left: 50%;
+      width: auto;
       transform: translate(-50%, -50%);
 }
 
@@ -203,7 +204,7 @@ img {
 
 @media(max-width: 900px) {
       .hero-image2 {
-            display: none;
+            display: block;
       }
       .media {
             position: absolute;
