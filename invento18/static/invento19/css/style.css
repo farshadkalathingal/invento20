@@ -206,6 +206,12 @@ img {
       .hero-image2 {
             display: block;
       }
+      .count {
+            display: block;
+      }
+      .countd {
+            display: block;
+      }
       .media {
             position: absolute;
             left: 50%;
@@ -249,6 +255,11 @@ color: #993399;
       font-weight: 300;
 }
 
+@media(max-width: 900px) {
+      .section {
+            display: block;
+      }
+}
 
 .count{
   margin: 40px 0;
@@ -302,6 +313,7 @@ color: #993399;
 
 @media(max-width: 900px) {
       .prod-sec {
+            display: block;
             padding-left: 30px;
             width: 100%;
             border: none;
