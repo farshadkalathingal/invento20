@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import DetailView
 from django.views.generic.base import ContextMixin
-from .models import Event
+from .models import Event, Ambassodar
+from .forms import AmbassodarForm
 
 class EventDetailView(DetailView):
     model = Event
@@ -43,3 +44,15 @@ def departmentview(request):
         'talks' : talks,
         })
         
+
+def ambassodar_create_view(request):
+    form = AmbassodarForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('home')
+    else:
+        return render(request, 'pages/campus_ambassador.html', {'form':form})
+
+def ambassador_page(request):
+    form = AmbassodarForm()
+    return render(request, 'pages/campus_ambassador.html', {'form':form})

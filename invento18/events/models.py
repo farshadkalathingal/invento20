@@ -41,3 +41,12 @@ class Event(models.Model):
 
     def get_admin_url(self):
         return reverse("admin:%s_%s_change" % (self._meta.app_label, self._meta.model_name), args=(self.id,))
+
+class Ambassodar(models.Model):
+    
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    email =  models.EmailField(max_length=254)
+    phone = models.CharField(max_length=20)
+    college = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
